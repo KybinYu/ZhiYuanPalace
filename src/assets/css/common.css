@@ -1,0 +1,162 @@
+/* 公共样式表 */
+:root {
+  --theme-color: #ffc7e4;
+  --common-grey-border-color: rgba(127, 127, 127, 0.2);
+  --header-bar-height: var(--van-nav-bar-height);
+  --footer-bar-height: var(--van-tabbar-height);
+  --side-bar-width: var(--spacer-15);
+  --van-nav-bar-height: var(--spacer-11) !important;
+  --van-tabbar-height: var(--spacer-11) !important;
+}
+:root[theme-mode='dark'] {
+  --theme-color: #7f00ff;
+}
+:root {
+  --spacer-0: 0px;
+  --spacer-1: 1px;
+  --spacer-2: 2px;
+  --spacer-3: 4px;
+  --spacer-4: 8px;
+  --spacer-5: 12px;
+  --spacer-6: 16px;
+  --spacer-7: 24px;
+  --spacer-8: 32px;
+  --spacer-9: 40px;
+  --spacer-10: 48px;
+  --spacer-11: 56px;
+  --spacer-12: 64px;
+  --spacer-13: 96px;
+  --spacer-14: 160px;
+  --spacer-15: 240px;
+  --spacer-16: 320px;
+  --spacer-17: 480px;
+  --spacer-18: 560px;
+  --spacer-19: 640px;
+  --spacer-20: 960px;
+  --spacer-21: 1200px;
+  --border-radius-xs: var(--spacer-3);
+  --border-radius-s: var(--spacer-4);
+  --border-radius-m: var(--spacer-6);
+  --border-radius-l: var(--spacer-7);
+  --border-radius-xl: var(--spacer-7);
+  --shadow-1: 0px 3px 18px rgba(0, 0, 0, 0.06),
+  0px 4px 7px rgba(0, 0, 0, 0.1), 0px 2px 7px -1px rgba(0, 0, 0, 0.14);
+  --shadow-2: 0px 5px 18px 2px rgba(0, 0, 0, 0.07),
+  0px 10px 15px 1px rgba(0, 0, 0, 0.1), 0px 6px 10px -4px rgba(0, 0, 0, 0.14);
+  --shadow-3: 0px 8px 33px 5px rgba(0, 0, 0, 0.07),
+  0px 18px 28px 2px rgba(0, 0, 0, 0.07),
+  0px 10px 12px -6px rgba(0, 0, 0, 0.17);
+}
+:root {
+  --gray-color-1: #fff;
+  --gray-color-2: #f8f9fc;
+  --gray-color-3: #f1f3f9;
+  --gray-color-4: #dadce3;
+  --gray-color-5: #c3c6ce;
+  --gray-color-6: #acafb8;
+  --gray-color-7: #9598a2;
+  --gray-color-8: #7f828d;
+  --gray-color-9: #686b77;
+  --gray-color-10: #515461;
+  --gray-color-11: #3a3e4c;
+  --gray-color-12: #232736;
+  --gray-color-13: #1a2030;
+  --gray-color-14: #0f1422;
+  --gray-color-15: #000;
+  --bg-color: var(--gray-color-3);
+  --bg-color-brighter: var(--gray-color-2);
+  --bg-color-hover: var(--gray-color-1);
+  --border-color: #e3e5ea;
+  --text-color: var(--gray-color-12);
+}
+:root[theme-mode='dark'] {
+  --bg-color: var(--gray-color-13);
+  --bg-color-brighter: var(--gray-color-12);
+  --bg-color-hover: var(--gray-color-11);
+  --border-color: #171d2c;
+  --text-color: var(--gray-color-4);
+}
+body {
+  font: 14px/1.5 'HarmonyOS Sans SC', 'Noto Sans SC Regular', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+  color: var(--text-color);
+}
+h1 {
+  font-size: var(--spacer-9);
+}
+h2 {
+  font-size: var(--spacer-8);
+}
+h3 {
+  font-size: var(--spacer-7);
+}
+h4 {
+  font-size: var(--spacer-6);
+}
+h5 {
+  font-size: var(--spacer-5);
+}
+h6 {
+  font-size: var(--spacer-5);
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input,
+button {
+  font-weight: normal;
+  line-height: 1.5;
+}
+@font-face {
+  font-family: 'segoe-fluent-icons';
+  src: url('../fonts/SegoeFluentIcons.ttf') format('truetype');
+}
+.segoe-fluent-icons {
+  font-family: 'segoe-fluent-icons' !important;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  -webkit-font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
+}
+::-webkit-scrollbar-track {
+  width: 4px;
+  background: transparent;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.3);
+}
+.acrylic {
+  backdrop-filter: blur(30px) brightness(150%) saturate(100%);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  background-image: url(data:image/png;base64,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);
+  background-size: 16px;
+  filter: brightness(110%);
+}
