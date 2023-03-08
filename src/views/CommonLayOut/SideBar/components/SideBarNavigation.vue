@@ -1,10 +1,9 @@
 <template>
   <nav id="side-bar-nav">
     <ul class="border-layer">
-      <li v-for="page in pages" :key="page.url">
-        <router-link :to="page.url" class="side-bar-router-link"></router-link>
-      </li>
+      <li v-for="page in pages" :key="page.url"></li>
     </ul>
+
     <ul class="content-layer">
       <li v-for="page in pages" :key="page.url">
         <router-link
@@ -22,8 +21,13 @@
         </router-link>
       </li>
     </ul>
+
+    <indicator />
   </nav>
 </template>
+<script setup>
+import Indicator from './Indicator.vue'
+</script>
 <script>
 export default {
   data() {
@@ -283,6 +287,20 @@ export default {
     ul.border-layer {
       opacity: 1;
     }
+  }
+}
+
+//指示器
+#side-bar-nav {
+  .indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--spacer-3);
+    background-color: var(--theme-color);
+    z-index: 2;
+    border-radius: var(--border-radius-xs);
   }
 }
 </style>

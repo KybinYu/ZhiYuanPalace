@@ -20,10 +20,10 @@
 </template>
 
 <script setup>
-import HeaderBar from '@/views/CommonLayOut/HeaderBar/HeaderBar.vue'
-import SideBar from '@/views/CommonLayOut/SideBar/SideBar.vue'
-import FooterBar from '@/views/CommonLayOut/FooterBar/FooterBar.vue'
-import MainView from '@/views/CommonLayOut/MainView/MainView.vue'
+import HeaderBar from './HeaderBar/HeaderBar.vue'
+import SideBar from './SideBar/SideBar.vue'
+import FooterBar from './FooterBar/FooterBar.vue'
+import MainView from './MainView/MainView.vue'
 </script>
 
 <style lang="less">

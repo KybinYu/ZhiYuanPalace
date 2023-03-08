@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/CommonLayOut/MainView/pages/HomePage.vue'
 
 const routes = [
   {
@@ -17,7 +17,9 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/ArticleView.vue'),
+      import(
+        /* webpackChunkName: "about" */ '../views/CommonLayOut/MainView/pages/ArticlePage.vue'
+      ),
     meta: {
       index: 2
     }
@@ -25,7 +27,8 @@ const routes = [
   {
     path: '/shuoshuo',
     name: 'shuoshuo',
-    component: () => import('../views/ShuoShuoView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/ShuoShuoPage.vue'),
     meta: {
       index: 3
     }
@@ -33,7 +36,8 @@ const routes = [
   {
     path: '/photo',
     name: 'photo',
-    component: () => import('../views/PhotoView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/PhotoPage.vue'),
     meta: {
       index: 4
     }
@@ -41,7 +45,8 @@ const routes = [
   {
     path: '/video',
     name: 'video',
-    component: () => import('../views/VideoView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/VideoPage.vue'),
     meta: {
       index: 5
     }
@@ -49,7 +54,8 @@ const routes = [
   {
     path: '/music',
     name: 'music',
-    component: () => import('../views/MusicView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/MusicPage.vue'),
     meta: {
       index: 6
     }
@@ -57,7 +63,8 @@ const routes = [
   {
     path: '/netdisk',
     name: 'netdisk',
-    component: () => import('../views/NetdiskView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/NetdiskPage.vue'),
     meta: {
       index: 7
     }
@@ -65,7 +72,8 @@ const routes = [
   {
     path: '/siteurl',
     name: 'siteurl',
-    component: () => import('../views/SiteUrlView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/SiteUrlPage.vue'),
     meta: {
       index: 8
     }
@@ -73,7 +81,8 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/AboutView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/AboutPage.vue'),
     meta: {
       index: 9
     }
@@ -81,7 +90,8 @@ const routes = [
   {
     path: '/friend',
     name: 'friend',
-    component: () => import('../views/FriendView.vue'),
+    component: () =>
+      import('../views/CommonLayOut/MainView/pages/FriendPage.vue'),
     meta: {
       index: 10
     }

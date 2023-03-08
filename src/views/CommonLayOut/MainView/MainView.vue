@@ -18,13 +18,11 @@ export default {
     //使用watch 监听$router的变化
     $route(to, from) {
       //如果to索引大于from索引,判断为前进状态,反之则为后退状态
-      // console.log(to, 'to')
-      // console.log(from, 'from')
       if (to.meta.index > from.meta.index) {
-        //设置动画名称
-        this.transitionName = 'transition-left'
+        //向下导航，bottom先走，top后走
+        this.transitionName = 'transition-next'
       } else {
-        this.transitionName = 'transition-right'
+        this.transitionName = 'transition-prev'
       }
     }
   }
@@ -40,14 +38,14 @@ export default {
 .content {
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
-.transition-left-enter-active,
-.transition-right-leave-active {
+.transition-next-enter-active,
+.transition-prev-leave-active {
   opacity: 0;
   -webkit-transform: translate(0, 200px);
   transform: translate(0, 200px);
 }
-.transition-left-leave-active,
-.transition-right-enter-active {
+.transition-next-leave-active,
+.transition-prev-enter-active {
   opacity: 0;
   -webkit-transform: translate(0, -200px);
   transform: translate(0, -200px);
