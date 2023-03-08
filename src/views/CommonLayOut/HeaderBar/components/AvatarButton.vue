@@ -1,10 +1,39 @@
 <template>
   <div class="avatar dropdown">
-    <button>
-      <img src="http://q1.qlogo.cn/g?b=qq&nk=570446022&s=4" alt="头像" />
-    </button>
+    <van-popover
+      v-model:show="showPopover"
+      :actions="actions"
+      @select="onSelect"
+      placement="bottom-end"
+    >
+      <template #reference>
+        <button>
+          <img src="http://q1.qlogo.cn/g?b=qq&nk=570446022&s=4" alt="头像" />
+        </button>
+      </template>
+    </van-popover>
   </div>
 </template>
+<script>
+import { ref } from 'vue'
+import { showToast } from 'vant'
+
+export default {
+  setup() {
+    const showPopover = ref(false)
+
+    // 通过 actions 属性来定义菜单选项
+    const actions = [{ text: '选项一' }, { text: '选项二' }, { text: '选项三' }]
+    const onSelect = (action) => showToast(action.text)
+
+    return {
+      actions,
+      onSelect,
+      showPopover
+    }
+  }
+}
+</script>
 <style lang="less" scoped>
 @keyframes an-bounce {
   0% {
@@ -34,6 +63,7 @@
 
   button {
     width: var(--header-bar-height);
+    height: 100%;
     border: 0;
     color: inherit;
     background-color: transparent;

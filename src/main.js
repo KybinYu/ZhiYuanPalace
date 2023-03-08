@@ -9,6 +9,7 @@ import '@vant/touch-emulator'
 import { Button } from 'vant'
 import { NavBar } from 'vant'
 import { Toast } from 'vant'
+import { Popover } from 'vant'
 
 // 2. 引入组件样式
 import 'vant/lib/index.css'
@@ -23,6 +24,7 @@ const app = createApp(App)
 app.use(Button)
 app.use(NavBar)
 app.use(Toast)
+app.use(Popover)
 
 app.use(router)
 app.mount('#app')

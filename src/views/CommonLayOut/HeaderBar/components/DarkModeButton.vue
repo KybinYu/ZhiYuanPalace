@@ -101,6 +101,11 @@ export default {
       }
     }
 
+    &:has(.darkmode-switch-animation-begin),
+    &:has(.darkmode-switch-animation-end) {
+      pointer-events: none;
+    }
+
     &:hover {
       color: var(--td-brand-color);
       background-color: rgba(0, 0, 0, 0.05);
