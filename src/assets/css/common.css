@@ -1,4 +1,5 @@
 /* 公共样式表 */
+/* 变量 */
 :root *:not(#router-view) {
   transition: background 200ms;
 }
@@ -8,13 +9,6 @@
   --header-bar-height: var(--van-nav-bar-height);
   --footer-bar-height: var(--van-tabbar-height);
   --side-bar-width: var(--spacer-15);
-  --van-nav-bar-height: var(--spacer-11) !important;
-  --van-tabbar-height: var(--spacer-11) !important;
-  --van-toast-default-width: var(--spacer-14) !important;
-  --van-toast-radius: var(--border-radius-xl) !important;
-  --van-toast-icon-size: var(--spacer-13) !important;
-  --van-toast-position-top-distance: 5% !important;
-  --van-toast-position-bottom-distance: 5% !important;
 }
 :root[theme-mode='dark'] {
   --theme-color: #7f00ff;
@@ -83,6 +77,15 @@
   --bg-color-hover: var(--gray-color-11);
   --border-color: #171d2c;
   --text-color: var(--gray-color-4);
+}
+:root:root {
+  --van-nav-bar-height: var(--spacer-11);
+  --van-tabbar-height: var(--spacer-11);
+  --van-toast-default-width: var(--spacer-14);
+  --van-toast-radius: var(--border-radius-xl);
+  --van-toast-icon-size: var(--spacer-13);
+  --van-toast-position-top-distance: 5%;
+  --van-toast-position-bottom-distance: 5%;
 }
 body {
   font: 14px/1.5 'HarmonyOS Sans SC', 'Noto Sans SC Regular', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;

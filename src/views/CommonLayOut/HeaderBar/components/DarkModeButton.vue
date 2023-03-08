@@ -24,6 +24,8 @@ export default {
       if (!document.documentElement.getAttribute('theme-mode')) {
         //切换主题
         document.documentElement.setAttribute('theme-mode', 'dark')
+        //适配vant组件
+        document.documentElement.classList.add('van-theme-dark')
 
         //弹出提示
         showToast({
@@ -47,6 +49,8 @@ export default {
       } else {
         //切换主题
         document.documentElement.removeAttribute('theme-mode')
+        //适配vant组件
+        document.documentElement.classList.remove('van-theme-dark')
 
         //弹出提示
         showToast({
