@@ -41,7 +41,7 @@ export default {
 
       //bottom变化，通过倒数order确定
       indicator.style.bottom = `calc(${
-        10 - order
+        10 - order - 1
       } * (var(--spacer-11) + var(--spacer-3)) + var(--spacer-6))`
       //top变化，通过正数order确定
       indicator.style.top = `calc(${order} * (var(--spacer-11) + var(--spacer-3)) + var(--spacer-6))`
@@ -49,3 +49,17 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+#side-bar-nav {
+  .indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--spacer-3);
+    background-color: var(--theme-color);
+    z-index: 2;
+    border-radius: var(--border-radius-xs);
+  }
+}
+</style>

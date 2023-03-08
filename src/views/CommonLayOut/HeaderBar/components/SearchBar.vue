@@ -15,7 +15,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .search-bar {
   width: 400px;
   position: relative;

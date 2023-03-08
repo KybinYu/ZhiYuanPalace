@@ -5,7 +5,7 @@
     </button>
   </div>
 </template>
-<style scoped lang="less">
+<style lang="less" scoped>
 @keyframes an-bounce {
   0% {
     opacity: 0;

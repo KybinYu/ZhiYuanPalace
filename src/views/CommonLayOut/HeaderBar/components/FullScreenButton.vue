@@ -5,7 +5,7 @@
     </button>
   </div>
 </template>
-<style scoped lang="less">
+<style lang="less" scoped>
 .fullscreen {
   display: flex;
   height: 100%;

@@ -4,6 +4,10 @@
       <li v-for="page in pages" :key="page.url"></li>
     </ul>
 
+    <div class="indicator-layer">
+      <indicator />
+    </div>
+
     <ul class="content-layer">
       <li v-for="page in pages" :key="page.url">
         <router-link
@@ -21,8 +25,6 @@
         </router-link>
       </li>
     </ul>
-
-    <indicator />
   </nav>
 </template>
 <script setup>
@@ -139,7 +141,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 //双层同时设置
 #side-bar-nav {
   position: absolute;
@@ -217,6 +219,12 @@ export default {
       }
     }
   }
+  div.indicator-layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 600px;
+  }
 }
 
 //内容单层
@@ -287,20 +295,6 @@ export default {
     ul.border-layer {
       opacity: 1;
     }
-  }
-}
-
-//指示器
-#side-bar-nav {
-  .indicator {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: var(--spacer-3);
-    background-color: var(--theme-color);
-    z-index: 2;
-    border-radius: var(--border-radius-xs);
   }
 }
 </style>

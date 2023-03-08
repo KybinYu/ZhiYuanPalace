@@ -3,7 +3,7 @@
     <img width="100" class="logo" src="@/assets/images/logo.png" alt="logo" />
   </div>
 </template>
-<style scoped lang="less">
+<style lang="less" scoped>
 .logo-box {
   height: 100%;
   display: flex;

@@ -26,7 +26,7 @@ import FooterBar from './FooterBar/FooterBar.vue'
 import MainView from './MainView/MainView.vue'
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 #app {
   position: fixed;
   top: 0;

@@ -15,7 +15,7 @@
     </div>
   </div>
 </template>
-<style lang="less">
+<style lang="less" scoped>
 .footer-bar-control {
   height: 100%;
   display: flex;

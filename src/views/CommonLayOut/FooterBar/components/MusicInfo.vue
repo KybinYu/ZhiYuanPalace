@@ -9,7 +9,7 @@
     </div>
   </div>
 </template>
-<style lang="less">
+<style lang="less" scoped>
 .footer-bar-info {
   display: flex;
   height: 100%;

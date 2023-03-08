@@ -30,7 +30,7 @@ export default {
   }
 }
 </script>
-<style scoped lang="less">
+<style lang="less" scoped>
 .darkmode {
   display: flex;
   height: 100%;
