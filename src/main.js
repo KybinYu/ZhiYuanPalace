@@ -8,6 +8,7 @@ import '@vant/touch-emulator'
 // 1. 引入你需要的组件
 import { Button } from 'vant'
 import { NavBar } from 'vant'
+import { Toast } from 'vant'
 
 // 2. 引入组件样式
 import 'vant/lib/index.css'
@@ -21,6 +22,7 @@ const app = createApp(App)
 // 3. 注册你需要的组件
 app.use(Button)
 app.use(NavBar)
+app.use(Toast)
 
 app.use(router)
 app.mount('#app')

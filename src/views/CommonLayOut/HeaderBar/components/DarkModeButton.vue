@@ -6,6 +6,7 @@
   </div>
 </template>
 <script>
+import { showToast } from 'vant'
 export default {
   data() {
     return {
@@ -21,10 +22,22 @@ export default {
         document.documentElement.setAttribute('theme-mode', 'dark')
         this.$data.darkmodeButonTooltip.msg = '日间模式'
         this.$data.darkmodeButonTooltip.icon = '\ue706'
+
+        showToast({
+          position: 'bottom',
+          message: '夜间模式已开启',
+          icon: 'https://pan.yiru.love/static/images/emoji/1f634.webp'
+        })
       } else {
         document.documentElement.removeAttribute('theme-mode')
         this.$data.darkmodeButonTooltip.msg = '夜间模式'
         this.$data.darkmodeButonTooltip.icon = '\ue708'
+
+        showToast({
+          position: 'bottom',
+          message: '夜间模式已关闭',
+          icon: 'https://pan.yiru.love/static/images/emoji/1f60e.webp'
+        })
       }
     }
   }
