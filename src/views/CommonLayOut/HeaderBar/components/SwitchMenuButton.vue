@@ -52,7 +52,7 @@ export default {
   }
 }
 //平板布局
-@media (min-width: 500px) and (max-width: 1019.99px) {
+@media (max-width: 1019.99px) {
   #layout-root {
     --side-bar-width: 88px !important;
     .switch-menu-button {
@@ -67,6 +67,7 @@ export default {
     --side-bar-width: 100% !important;
 
     .switch-menu-button {
+      display: block;
       width: var(--header-bar-height);
       height: var(--header-bar-height);
       top: 0;
