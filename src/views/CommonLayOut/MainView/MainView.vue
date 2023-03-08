@@ -1,5 +1,5 @@
 <template>
-  <router-view class="content" v-slot="{ Component }">
+  <router-view class="content" id="router-view" v-slot="{ Component }">
     <transition :name="transitionName">
       <component :is="Component" />
     </transition>

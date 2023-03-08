@@ -1,4 +1,7 @@
 /* 公共样式表 */
+:root *:not(#router-view) {
+  transition: background 200ms;
+}
 :root {
   --theme-color: #ffc7e4;
   --common-grey-border-color: rgba(127, 127, 127, 0.2);
