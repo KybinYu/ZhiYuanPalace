@@ -40,11 +40,4 @@
     }
   }
 }
-
-//移动端隐藏元素
-@media (max-width: 699.99px) {
-  .footer-bar-inner > .right {
-    display: none !important;
-  }
-}
 </style>
