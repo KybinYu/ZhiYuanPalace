@@ -20,9 +20,6 @@ export default {
   width: 400px;
   position: relative;
 
-  &:focus::after {
-    transform: scaleX(1);
-  }
   form {
     &::after {
       content: '';
