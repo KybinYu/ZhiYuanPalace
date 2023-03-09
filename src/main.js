@@ -18,6 +18,7 @@ import 'vant/lib/index.css'
 //自定义样式表
 import './assets/css/base.css'
 import './assets/css/common.css'
+import './assets/css/common-to-vant.css'
 
 const app = createApp(App)
 

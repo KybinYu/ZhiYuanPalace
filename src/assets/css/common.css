@@ -1,19 +1,54 @@
 /* 公共样式表 */
-/* 变量 */
 :root *:not(#router-view):not(img):not(.layout-left):not(.segoe-fluent-icons) {
   transition: background 200ms;
 }
 :root {
-  --theme-color: #ffc7e4;
+  --font-size-xs: 10px;
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 18px;
+  --border-radius-xs: var(--spacer-3);
+  --border-radius-s: var(--spacer-4);
+  --border-radius-m: var(--spacer-6);
+  --border-radius-l: var(--spacer-7);
+  --border-radius-xl: var(--spacer-8);
+  --shadow-1: 0px 3px 18px rgba(0, 0, 0, 0.06),
+  0px 4px 7px rgba(0, 0, 0, 0.1), 0px 2px 7px -1px rgba(0, 0, 0, 0.14);
+  --shadow-2: 0px 5px 18px 2px rgba(0, 0, 0, 0.07),
+  0px 10px 15px 1px rgba(0, 0, 0, 0.1), 0px 6px 10px -4px rgba(0, 0, 0, 0.14);
+  --shadow-3: 0px 8px 33px 5px rgba(0, 0, 0, 0.07),
+  0px 18px 28px 2px rgba(0, 0, 0, 0.07),
+  0px 10px 12px -6px rgba(0, 0, 0, 0.17);
   --common-grey-border-color: rgba(127, 127, 127, 0.2);
-  --header-bar-height: var(--van-nav-bar-height);
-  --footer-bar-height: var(--van-tabbar-height);
+  --header-bar-height: var(--spacer-10);
+  --footer-bar-height: var(--spacer-10);
   --side-bar-width: calc(var(--spacer-15) * 0.9);
   --side-bar-item-height: var(--spacer-10);
   --button-hover-bg: rgba(127, 127, 127, 0.1);
+  --overlay-bg: rgba(0, 0, 0, 0.3);
+}
+:root {
+  --theme-color: #ffc7e4;
+  --bg-color: var(--gray-color-3);
+  --bg-color-brighter: var(--gray-color-2);
+  --bg-color-hover: var(--gray-color-1);
+  --border-color: #e3e5ea;
+  --text-color: var(--gray-color-12);
+  --text-color-2: var(--gray-color-9);
+  --text-color-3: var(--gray-color-6);
+  --toast-bg: rgba(218, 220, 227, 0.7);
 }
 :root[theme-mode='dark'] {
   --theme-color: #7f00ff;
+  --bg-color: var(--gray-color-13);
+  --bg-color-brighter: var(--gray-color-12);
+  --bg-color-hover: var(--gray-color-11);
+  --border-color: #171d2c;
+  --text-color: var(--gray-color-4);
+  --text-color-2: var(--gray-color-7);
+  --text-color-3: var(--gray-color-10);
+  --toast-bg: rgba(58, 62, 76, 0.7);
 }
 :root {
   --spacer-0: 0px;
@@ -38,18 +73,6 @@
   --spacer-19: 640px;
   --spacer-20: 960px;
   --spacer-21: 1200px;
-  --border-radius-xs: var(--spacer-3);
-  --border-radius-s: var(--spacer-4);
-  --border-radius-m: var(--spacer-6);
-  --border-radius-l: var(--spacer-7);
-  --border-radius-xl: var(--spacer-7);
-  --shadow-1: 0px 3px 18px rgba(0, 0, 0, 0.06),
-  0px 4px 7px rgba(0, 0, 0, 0.1), 0px 2px 7px -1px rgba(0, 0, 0, 0.14);
-  --shadow-2: 0px 5px 18px 2px rgba(0, 0, 0, 0.07),
-  0px 10px 15px 1px rgba(0, 0, 0, 0.1), 0px 6px 10px -4px rgba(0, 0, 0, 0.14);
-  --shadow-3: 0px 8px 33px 5px rgba(0, 0, 0, 0.07),
-  0px 18px 28px 2px rgba(0, 0, 0, 0.07),
-  0px 10px 12px -6px rgba(0, 0, 0, 0.17);
 }
 :root {
   --gray-color-1: #fff;
@@ -67,27 +90,6 @@
   --gray-color-13: #1a2030;
   --gray-color-14: #0f1422;
   --gray-color-15: #000;
-  --bg-color: var(--gray-color-3);
-  --bg-color-brighter: var(--gray-color-2);
-  --bg-color-hover: var(--gray-color-1);
-  --border-color: #e3e5ea;
-  --text-color: var(--gray-color-12);
-}
-:root[theme-mode='dark'] {
-  --bg-color: var(--gray-color-13);
-  --bg-color-brighter: var(--gray-color-12);
-  --bg-color-hover: var(--gray-color-11);
-  --border-color: #171d2c;
-  --text-color: var(--gray-color-4);
-}
-:root:root {
-  --van-nav-bar-height: var(--spacer-10);
-  --van-tabbar-height: var(--spacer-10);
-  --van-toast-default-width: var(--spacer-14);
-  --van-toast-radius: var(--border-radius-xl);
-  --van-toast-icon-size: var(--spacer-13);
-  --van-toast-position-top-distance: 5%;
-  --van-toast-position-bottom-distance: 5%;
 }
 body {
   font: 14px/1.5 'HarmonyOS Sans SC', 'Noto Sans SC Regular', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
