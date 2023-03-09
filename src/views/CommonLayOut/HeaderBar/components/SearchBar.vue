@@ -79,8 +79,8 @@ export default {
     display: none;
     position: fixed;
     width: auto;
-    left: 60px;
-    right: 120px;
+    left: var(--header-bar-height);
+    right: calc(var(--header-bar-height) * 2);
   }
   .menu-open .search-bar {
     display: block;
