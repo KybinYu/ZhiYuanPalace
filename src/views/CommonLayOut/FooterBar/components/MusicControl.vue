@@ -6,7 +6,9 @@
       </button>
     </div>
     <div class="play">
-      <button><i class="segoe-fluent-icons">&#xedda;</i></button>
+      <button class="set-background">
+        <i class="segoe-fluent-icons">&#xedda;</i>
+      </button>
     </div>
     <div class="next">
       <button>

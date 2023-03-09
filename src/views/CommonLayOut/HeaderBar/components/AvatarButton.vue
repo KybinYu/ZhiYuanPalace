@@ -142,8 +142,8 @@ export default {
     font-size: 14px;
 
     > img {
-      width: 36px;
-      height: 36px;
+      width: var(--spacer-8);
+      height: var(--spacer-8);
       border-radius: 50%;
       animation: an-bounce 0.7s;
 

@@ -18,7 +18,7 @@
     cursor: pointer;
     vertical-align: super;
     padding: 0;
-    font-size: 14px;
+    font-size: var(--font-size-m);
 
     &:hover {
       color: var(--td-brand-color);

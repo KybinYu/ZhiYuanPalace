@@ -58,6 +58,7 @@ export default {
       width: var(--spacer-9);
       border-radius: var(--border-radius-s);
       background-color: transparent;
+      font-size: var(--font-size-m);
       cursor: pointer;
 
       &:hover {

@@ -1,0 +1,84 @@
+/* 移动适配 */
+
+//移动端取消hover颜色
+:root[device|="mobile"] button:not(.set-background):hover,
+:root[device|="mobile"] div:not(.set-background):hover,
+:root[device|="mobile"] input[type='submit']:hover {
+  background: transparent !important;
+}
+
+//移动端隐藏侧边导航的探照灯
+:root[device|='mobile'] {
+  ul.border-layer {
+    display: none;
+  }
+}
+
+//LESS变量
+@ViewWidth: 3.75vw;
+// @ViewHeight: 7.36vh;
+
+//计算
+@font-size-xs: (10 / @ViewWidth);
+@font-size-s: (12 / @ViewWidth);
+@font-size-m: (14 / @ViewWidth);
+@font-size-l: (16 / @ViewWidth);
+@font-size-xl: (18 / @ViewWidth);
+@spacer-0: (0 / @ViewWidth);
+@spacer-1: (1 / @ViewWidth);
+@spacer-2: (2 / @ViewWidth);
+@spacer-3: (4 / @ViewWidth);
+@spacer-4: (8 / @ViewWidth);
+@spacer-5: (12 / @ViewWidth);
+@spacer-6: (16 / @ViewWidth);
+@spacer-7: (24 / @ViewWidth);
+@spacer-8: (32 / @ViewWidth);
+@spacer-9: (40 / @ViewWidth);
+@spacer-10: (48 / @ViewWidth);
+@spacer-11: (56 / @ViewWidth);
+@spacer-12: (64 / @ViewWidth);
+@spacer-13: (96 / @ViewWidth);
+@spacer-14: (160 / @ViewWidth);
+@spacer-15: (240 / @ViewWidth);
+@spacer-16: (320 / @ViewWidth);
+@spacer-17: (480 / @ViewWidth);
+@spacer-18: (560 / @ViewWidth);
+@spacer-19: (640 / @ViewWidth);
+@spacer-20: (960 / @ViewWidth);
+@spacer-21: (1200 / @ViewWidth);
+
+//移动端屏幕大小查询器，可以在适配小屏幕手机端的同时，不影响平板、电脑端
+@media (max-width: 499.99px) {
+  :root {
+    --font-size-xs: @font-size-xs;
+    --font-size-s: @font-size-s;
+    --font-size-m: @font-size-m;
+    --font-size-l: @font-size-l;
+    --font-size-xl: @font-size-xl;
+  }
+  //公共大小CSS变量
+  :root {
+    --spacer-0: @spacer-0;
+    --spacer-1: @spacer-1;
+    --spacer-2: @spacer-2;
+    --spacer-3: @spacer-3;
+    --spacer-4: @spacer-4;
+    --spacer-5: @spacer-5;
+    --spacer-6: @spacer-6;
+    --spacer-7: @spacer-7;
+    --spacer-8: @spacer-8;
+    --spacer-9: @spacer-9;
+    --spacer-10: @spacer-10;
+    --spacer-11: @spacer-11;
+    --spacer-12: @spacer-12;
+    --spacer-13: @spacer-13;
+    --spacer-14: @spacer-14;
+    --spacer-15: @spacer-15;
+    --spacer-16: @spacer-16;
+    --spacer-17: @spacer-17;
+    --spacer-18: @spacer-18;
+    --spacer-19: @spacer-19;
+    --spacer-20: @spacer-20;
+    --spacer-21: @spacer-21;
+  }
+}

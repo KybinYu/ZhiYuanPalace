@@ -130,7 +130,9 @@ export default {
       const layoutRoot = document.getElementById('layout-root')
       if (layoutRoot) {
         if (layoutRoot.classList.contains('menu-open')) {
-          layoutRoot.classList.remove('menu-open')
+          setTimeout(function () {
+            layoutRoot.classList.remove('menu-open')
+          }, 400)
         }
       }
     },

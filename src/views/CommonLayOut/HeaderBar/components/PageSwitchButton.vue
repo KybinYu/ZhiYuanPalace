@@ -44,7 +44,7 @@ export default {
     cursor: pointer;
     vertical-align: super;
     padding: 0;
-    font-size: 14px;
+    font-size: var(--font-size-m);
 
     i.segoe-fluent-icons {
       display: inline-block;

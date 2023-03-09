@@ -1,0 +1,42 @@
+/* 移动适配 */
+:root[device|="mobile"] button:not(.set-background):hover,
+:root[device|="mobile"] div:not(.set-background):hover,
+:root[device|="mobile"] input[type='submit']:hover {
+  background: transparent !important;
+}
+:root[device|='mobile'] ul.border-layer {
+  display: none;
+}
+@media (max-width: 499.99px) {
+  :root {
+    --font-size-xs: 2.66666667vw;
+    --font-size-s: 3.2vw;
+    --font-size-m: 3.73333333vw;
+    --font-size-l: 4.26666667vw;
+    --font-size-xl: 4.8vw;
+  }
+  :root {
+    --spacer-0: 0vw;
+    --spacer-1: 0.26666667vw;
+    --spacer-2: 0.53333333vw;
+    --spacer-3: 1.06666667vw;
+    --spacer-4: 2.13333333vw;
+    --spacer-5: 3.2vw;
+    --spacer-6: 4.26666667vw;
+    --spacer-7: 6.4vw;
+    --spacer-8: 8.53333333vw;
+    --spacer-9: 10.66666667vw;
+    --spacer-10: 12.8vw;
+    --spacer-11: 14.93333333vw;
+    --spacer-12: 17.06666667vw;
+    --spacer-13: 25.6vw;
+    --spacer-14: 42.66666667vw;
+    --spacer-15: 64vw;
+    --spacer-16: 85.33333333vw;
+    --spacer-17: 128vw;
+    --spacer-18: 149.33333333vw;
+    --spacer-19: 170.66666667vw;
+    --spacer-20: 256vw;
+    --spacer-21: 320vw;
+  }
+}

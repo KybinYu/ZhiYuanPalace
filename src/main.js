@@ -19,6 +19,7 @@ import 'vant/lib/index.css'
 import './assets/css/base.css'
 import './assets/css/common.css'
 import './assets/css/common-to-vant.css'
+import './assets/css/mobile.css'
 
 const app = createApp(App)
 

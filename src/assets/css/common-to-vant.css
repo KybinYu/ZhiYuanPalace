@@ -72,7 +72,7 @@
   --van-toast-text-color: var(--van-text-color);
   --van-toast-loading-icon-color: var(--van-text-color);
   --van-toast-background: var(--toast-bg);
-  --van-toast-icon-size: var(--spacer-13);
+  --van-toast-icon-size: var(--spacer-11);
   --van-toast-text-min-width: var(--spacer-13);
   --van-toast-default-width: var(--spacer-14);
   --van-toast-default-min-height: var(--spacer-12);
