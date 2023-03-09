@@ -65,7 +65,7 @@
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--button-hover-bg);
 
     .cover {
       img {

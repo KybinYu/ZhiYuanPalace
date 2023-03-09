@@ -31,12 +31,16 @@
       font-size: 16px;
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: var(--button-hover-bg);
       }
     }
     &.music-lyric-button > button {
       font-size: 14px;
-      transform: translateY(-2px);
+
+      i.segoe-fluent-icons {
+        display: inline-block;
+        transform: translateY(-2px);
+      }
     }
   }
 }

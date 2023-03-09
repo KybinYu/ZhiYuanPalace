@@ -41,15 +41,15 @@
       }
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: var(--button-hover-bg);
       }
     }
 
     &.play {
       button {
         font-size: 20px;
-        color: #3c425b;
-        background: #fff;
+        color: inherit;
+        background: var(--bg-color-hover);
         border-radius: 50%;
         transform: scale(0.8);
         i {
@@ -58,11 +58,7 @@
       }
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-
-        button {
-          filter: brightness(0.95);
-        }
+        background-color: var(--button-hover-bg);
       }
     }
   }

@@ -23,7 +23,7 @@
     margin: var(--spacer-6) var(--spacer-6) var(--spacer-6) 0;
   }
   &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--button-hover-bg);
   }
 }
 </style>
