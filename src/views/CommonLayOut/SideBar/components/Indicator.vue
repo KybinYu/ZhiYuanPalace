@@ -13,9 +13,9 @@ export default {
       //bottom变化，通过倒数order确定
       indicator.style.bottom = `calc(${
         10 - order
-      } * (var(--spacer-11) + var(--spacer-3)) + var(--spacer-6))`
+      } * (var(--side-bar-item-height) + var(--spacer-3)) + var(--spacer-6))`
       //top变化，通过正数order确定
-      indicator.style.top = `calc(${order} * (var(--spacer-11) + var(--spacer-3)) + var(--spacer-6))`
+      indicator.style.top = `calc(${order} * (var(--side-bar-item-height) + var(--spacer-3)) + var(--spacer-6))`
     }
   },
   mounted() {
@@ -42,9 +42,9 @@ export default {
       //bottom变化，通过倒数order确定
       indicator.style.bottom = `calc(${
         10 - order - 1
-      } * (var(--spacer-11) + var(--spacer-3)) + var(--spacer-6))`
+      } * (var(--side-bar-item-height) + var(--spacer-3)) + var(--spacer-6))`
       //top变化，通过正数order确定
-      indicator.style.top = `calc(${order} * (var(--spacer-11) + var(--spacer-3)) + var(--spacer-6))`
+      indicator.style.top = `calc(${order} * (var(--side-bar-item-height) + var(--spacer-3)) + var(--spacer-6))`
     }
   }
 }

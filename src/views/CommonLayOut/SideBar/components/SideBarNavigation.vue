@@ -174,7 +174,7 @@ export default {
     right: 0;
 
     > li {
-      height: var(--spacer-11);
+      height: var(--side-bar-item-height);
       margin-bottom: var(--spacer-3);
       width: 100%;
       border-radius: var(--border-radius-s);
@@ -190,7 +190,7 @@ export default {
 
         > .icon {
           height: 100%;
-          width: var(--spacer-11);
+          width: var(--side-bar-item-height);
           position: relative;
           flex: none;
           transform: translateY(0px);
@@ -201,7 +201,7 @@ export default {
             top: 0;
             width: 100%;
             height: 100%;
-            font-size: calc(var(--spacer-6) + 2px);
+            font-size: var(--spacer-6);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -217,8 +217,9 @@ export default {
           }
         }
         > span {
-          font-size: calc(var(--spacer-5) + var(--spacer-2));
+          font-size: var(--spacer-5);
           display: inline-block;
+          flex: none;
 
           &.alias {
             opacity: 0;
@@ -228,7 +229,6 @@ export default {
             background-color: var(--theme-color);
             padding: 0 var(--spacer-4);
             border-radius: var(--border-radius-xs);
-            font-size: calc(var(--spacer-5));
           }
         }
       }
@@ -238,7 +238,8 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 600px;
+    height: 520px;
+    height: calc(10 * (var(--side-bar-item-height) + var(--spacer-3)));
   }
 }
 

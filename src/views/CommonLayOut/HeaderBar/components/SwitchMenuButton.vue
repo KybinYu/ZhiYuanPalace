@@ -65,14 +65,14 @@ export default {
 @media (min-width: 1020px) {
   #layout-root {
     &.menu-switch {
-      --side-bar-width: 88px !important;
+      --side-bar-width: 80px !important;
     }
   }
 }
 //平板布局
 @media (max-width: 1019.99px) {
   #layout-root {
-    --side-bar-width: 88px !important;
+    --side-bar-width: 80px !important;
     .switch-menu-button {
       display: none;
     }
