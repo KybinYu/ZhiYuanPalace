@@ -1,12 +1,12 @@
 <template>
-  <div class="fullscreen">
+  <div class="full-screen-switch-button-div">
     <button>
       <i class="segoe-fluent-icons">&#xe740;</i>
     </button>
   </div>
 </template>
 <style lang="less" scoped>
-.fullscreen {
+.full-screen-switch-button-div {
   display: flex;
   height: 100%;
 
@@ -29,7 +29,7 @@
 
 //移动端隐藏元素
 @media (max-width: 699.99px) {
-  .fullscreen {
+  .full-screen-switch-button-div {
     display: none;
   }
 }

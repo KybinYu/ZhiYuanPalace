@@ -1,6 +1,6 @@
 <template>
-  <button class="switch-menu-button" @click="switchMenu(), animation()">
-    <i class="segoe-fluent-icons" id="switch-menu-icon">&#xe700;</i>
+  <button class="menu-switch-button" @click="switchMenu(), animation()">
+    <i class="segoe-fluent-icons" id="menu-switch-icon">&#xe700;</i>
   </button>
 </template>
 
@@ -9,10 +9,10 @@ export default {
   methods: {
     animation() {
       //延迟动画
-      const icon = document.querySelector('#switch-menu-icon')
-      icon.classList.add('switch-menu-icon-animation')
+      const icon = document.querySelector('#menu-switch-icon')
+      icon.classList.add('menu-switch-icon-animation')
       setTimeout(function () {
-        icon.classList.remove('switch-menu-icon-animation')
+        icon.classList.remove('menu-switch-icon-animation')
       }, 200)
     },
     switchMenu() {
@@ -35,7 +35,7 @@ export default {
 </script>
 <style lang="less">
 /* 按钮样式 */
-.switch-menu-button {
+.menu-switch-button {
   color: inherit !important;
   transition: none;
   width: var(--header-bar-height);
@@ -44,11 +44,11 @@ export default {
   background-color: transparent;
   border: 0;
 
-  i#switch-menu-icon {
+  i#menu-switch-icon {
     transition: all 200ms;
     display: inline-block;
 
-    &.switch-menu-icon-animation {
+    &.menu-switch-icon-animation {
       transition: all 200ms;
       transform: scaleX(0.4);
     }
@@ -73,7 +73,7 @@ export default {
 @media (max-width: 1019.99px) {
   #layout-root {
     --side-bar-width: 80px !important;
-    .switch-menu-button {
+    .menu-switch-button {
       display: none;
     }
   }
@@ -84,7 +84,7 @@ export default {
   #layout-root {
     --side-bar-width: 100% !important;
 
-    .switch-menu-button {
+    .menu-switch-button {
       display: block;
       width: var(--header-bar-height);
       height: var(--header-bar-height);

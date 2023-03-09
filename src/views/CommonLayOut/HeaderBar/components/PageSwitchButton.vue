@@ -1,9 +1,9 @@
 <template>
-  <div class="page-switching">
-    <button id="switch-up-btn" @click="pageSwitching(-1), animation($event)">
+  <div class="page-switch-button-div">
+    <button @click="pageSwitching(-1), animation($event)">
       <i class="segoe-fluent-icons">&#xe973;</i>
     </button>
-    <button id="switch-down-btn" @click="pageSwitching(1), animation($event)">
+    <button @click="pageSwitching(1), animation($event)">
       <i class="segoe-fluent-icons">&#xe974;</i>
     </button>
   </div>
@@ -15,9 +15,9 @@ export default {
       //延迟动画
       //获得点击元素的第一个子元素
       const icon = e.currentTarget.firstElementChild
-      icon.classList.add('switch-page-icon-animation')
+      icon.classList.add('page-switch-icon-animation')
       setTimeout(function () {
-        icon.classList.remove('switch-page-icon-animation')
+        icon.classList.remove('page-switch-icon-animation')
       }, 200)
     },
     pageSwitching(num) {
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.page-switching {
+.page-switch-button-div {
   display: flex;
   height: 100%;
 
@@ -50,7 +50,7 @@ export default {
       display: inline-block;
       transform: none;
       transition: all 400ms;
-      &.switch-page-icon-animation {
+      &.page-switch-icon-animation {
         transform: scale(2, 0.5);
       }
     }
@@ -64,7 +64,7 @@ export default {
 
 //移动端隐藏元素
 @media (max-width: 699.99px) {
-  .page-switching {
+  .page-switch-button-div {
     display: none;
   }
 }

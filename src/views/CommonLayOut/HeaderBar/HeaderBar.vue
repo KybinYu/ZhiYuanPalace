@@ -1,9 +1,9 @@
 <template>
   <div class="header-bar-inner">
     <div class="left">
-      <SwitchMenuButton />
+      <MenuSwitchButton />
       <LogoBox />
-      <PageSwitching />
+      <PageSwitchButton />
     </div>
 
     <div class="center">
@@ -12,19 +12,21 @@
 
     <div class="right">
       <AvatarButton />
-      <DarkModeButton />
-      <FullScreenButton />
+      <DarkModeSwitchButton />
+      <FullScreenSwitchButton />
     </div>
   </div>
 </template>
 <script setup>
-import SearchBar from './components/SearchBar.vue'
-import SwitchMenuButton from './components/SwitchMenuButton.vue'
+import MenuSwitchButton from './components/MenuSwitchButton.vue'
 import LogoBox from './components/LogoBox.vue'
-import PageSwitching from './components/PageSwitching.vue'
-import DarkModeButton from './components/DarkModeButton.vue'
+import PageSwitchButton from './components/PageSwitchButton.vue'
+
+import SearchBar from './components/SearchBar.vue'
+
 import AvatarButton from './components/AvatarButton.vue'
-import FullScreenButton from './components/FullScreenButton.vue'
+import DarkModeSwitchButton from './components/DarkModeSwitchButton.vue'
+import FullScreenSwitchButton from './components/FullScreenSwitchButton.vue'
 </script>
 <style lang="less">
 #header-bar {

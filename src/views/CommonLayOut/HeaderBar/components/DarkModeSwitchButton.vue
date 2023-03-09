@@ -1,7 +1,7 @@
 <template>
-  <div class="darkmode">
+  <div class="dark-mode-switch-button-div">
     <button @click="darkMode()">
-      <i class="segoe-fluent-icons" id="switch-darkmode-icon">
+      <i class="segoe-fluent-icons" id="dark-mode-switch-icon">
         {{ darkmodeButonTooltip.icon }}
       </i>
     </button>
@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     darkMode() {
-      const icon = document.querySelector('#switch-darkmode-icon')
+      const icon = document.querySelector('#dark-mode-switch-icon')
       if (!document.documentElement.getAttribute('theme-mode')) {
         //切换主题
         document.documentElement.setAttribute('theme-mode', 'dark')
@@ -35,15 +35,15 @@ export default {
         })
 
         //延迟更换图标，配合动画
-        icon.classList.add('switch-darkmode-icon-animation-begin')
+        icon.classList.add('dark-mode-switch-icon-animation-begin')
         var th = this
         setTimeout(function () {
-          icon.classList.remove('switch-darkmode-icon-animation-begin')
-          icon.classList.add('switch-darkmode-icon-animation-end')
+          icon.classList.remove('dark-mode-switch-icon-animation-begin')
+          icon.classList.add('dark-mode-switch-icon-animation-end')
           th.darkmodeButonTooltip.msg = '日间模式'
           th.darkmodeButonTooltip.icon = '\ue706'
           setTimeout(function () {
-            icon.classList.remove('switch-darkmode-icon-animation-end')
+            icon.classList.remove('dark-mode-switch-icon-animation-end')
           }, 400)
         }, 200)
       } else {
@@ -60,15 +60,15 @@ export default {
         })
 
         //延迟更换图标，配合动画
-        icon.classList.add('switch-darkmode-icon-animation-begin')
+        icon.classList.add('dark-mode-switch-icon-animation-begin')
         var th = this
         setTimeout(function () {
-          icon.classList.remove('switch-darkmode-icon-animation-begin')
-          icon.classList.add('switch-darkmode-icon-animation-end')
+          icon.classList.remove('dark-mode-switch-icon-animation-begin')
+          icon.classList.add('dark-mode-switch-icon-animation-end')
           th.darkmodeButonTooltip.msg = '夜间模式'
           th.darkmodeButonTooltip.icon = '\ue708'
           setTimeout(function () {
-            icon.classList.remove('switch-darkmode-icon-animation-end')
+            icon.classList.remove('dark-mode-switch-icon-animation-end')
           }, 600)
         }, 300)
       }
@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.darkmode {
+.dark-mode-switch-button-div {
   display: flex;
   height: 100%;
   overflow: hidden;
@@ -92,21 +92,21 @@ export default {
     padding: 0;
     font-size: 14px;
 
-    i#switch-darkmode-icon {
+    i#dark-mode-switch-icon {
       display: inline-block;
 
-      &.switch-darkmode-icon-animation-begin {
+      &.dark-mode-switch-icon-animation-begin {
         transition: all 400ms;
         transform: rotateZ(-180deg) scale(0.6);
       }
-      &.switch-darkmode-icon-animation-end {
+      &.dark-mode-switch-icon-animation-end {
         transition: all 400ms;
         transform: rotateZ(-360deg) scale(1);
       }
     }
 
-    &:has(.switch-darkmode-icon-animation-begin),
-    &:has(.switch-darkmode-icon-animation-end) {
+    &:has(.dark-mode-switch-icon-animation-begin),
+    &:has(.dark-mode-switch-icon-animation-end) {
       pointer-events: none;
     }
 

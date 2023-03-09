@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar">
+  <div class="avatar-button-div">
     <van-popover
       v-model:show="showPopover"
       :actions="actions"
@@ -126,7 +126,7 @@ export default {
   }
 }
 
-.avatar {
+.avatar-button-div {
   display: flex;
   height: 100%;
 
