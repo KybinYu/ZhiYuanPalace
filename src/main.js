@@ -10,6 +10,7 @@ import { Button } from 'vant'
 import { NavBar } from 'vant'
 import { Toast } from 'vant'
 import { Popover } from 'vant'
+import { Dialog } from 'vant'
 
 // 2. 引入组件样式
 import 'vant/lib/index.css'
@@ -25,6 +26,7 @@ app.use(Button)
 app.use(NavBar)
 app.use(Toast)
 app.use(Popover)
+app.use(Dialog)
 
 app.use(router)
 app.mount('#app')

@@ -36,7 +36,7 @@ import MainView from './MainView/MainView.vue'
   overflow: hidden;
 
   #layout-root {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -80,6 +80,7 @@ import MainView from './MainView/MainView.vue'
           left: 0;
           right: 0;
           z-index: 20;
+          background: var(--bg-color-brighter);
         }
       }
     }

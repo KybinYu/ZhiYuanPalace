@@ -1,12 +1,20 @@
 <template>
-  <button class="switch-menu-button" @click="switchMenu()">
-    <i class="segoe-fluent-icons">&#xe8e4;</i>
+  <button class="switch-menu-button" @click="switchMenu(), animation()">
+    <i class="segoe-fluent-icons" id="switch-menu-icon">&#xe700;</i>
   </button>
 </template>
 
 <script>
 export default {
   methods: {
+    animation() {
+      //延迟动画
+      const icon = document.querySelector('#switch-menu-icon')
+      icon.classList.add('switch-menu-icon-animation')
+      setTimeout(function () {
+        icon.classList.remove('switch-menu-icon-animation')
+      }, 200)
+    },
     switchMenu() {
       const layoutRoot = document.getElementById('layout-root')
       if (layoutRoot) {
@@ -35,6 +43,16 @@ export default {
   border-radius: 0;
   background-color: transparent;
   border: 0;
+
+  i#switch-menu-icon {
+    transition: all 200ms;
+    display: inline-block;
+
+    &.switch-menu-icon-animation {
+      transition: all 200ms;
+      transform: scaleX(0.4);
+    }
+  }
   &:hover {
     color: var(--td-brand-color);
     background-color: rgba(0, 0, 0, 0.05);
@@ -73,7 +91,6 @@ export default {
       top: 0;
       left: 0;
       border-radius: 0;
-      background-color: transparent;
       border: 0;
     }
     header.layout-top {

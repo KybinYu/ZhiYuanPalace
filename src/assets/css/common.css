@@ -1,6 +1,6 @@
 /* 公共样式表 */
 /* 变量 */
-:root *:not(#router-view) {
+:root *:not(#router-view):not(img):not(.layout-left):not(.segoe-fluent-icons) {
   transition: background 200ms;
 }
 :root {

@@ -16,9 +16,14 @@
   }
   &::after {
     content: 'ZhiYuanPalace';
-    font-size: 12px;
+    font-size: var(--spacer-5);
+    font-weight: bold;
+    opacity: 0.5;
     letter-spacing: 1px;
-    margin: 15px 15px 15px 0;
+    margin: var(--spacer-6) var(--spacer-6) var(--spacer-6) 0;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
   }
 }
 </style>

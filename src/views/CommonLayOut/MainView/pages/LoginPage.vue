@@ -1,9 +1,11 @@
 <template>
-  <div class="home full-page">
+  <div class="full-page">
     <van-nav-bar
-      title="注册登录"
-      left-text=""
+      title="登录后宫"
       left-arrow
+      clickable
+      fixed
+      placeholder
       @click-left="onClickLeft"
     />
   </div>

@@ -13,7 +13,7 @@
         <router-link
           :to="page.url"
           class="side-bar-router-link"
-          @click="closeMenu()"
+          @click="closeMenu(), animation($event)"
         >
           <div class="icon">
             <i class="segoe-fluent-icons fillIcon">{{ page.fillIcon }}</i>
@@ -133,6 +133,15 @@ export default {
           layoutRoot.classList.remove('menu-open')
         }
       }
+    },
+    animation(e) {
+      //延迟动画
+      //获得点击元素的第一个子元素
+      const icon = e.currentTarget.firstElementChild
+      icon.classList.add('side-bar-nav-icon-animation')
+      setTimeout(function () {
+        icon.classList.remove('side-bar-nav-icon-animation')
+      }, 200)
     }
   },
   mounted() {
@@ -184,6 +193,8 @@ export default {
           width: var(--spacer-11);
           position: relative;
           flex: none;
+          transform: translateY(0px);
+          transition: all 400ms;
 
           > i {
             position: absolute;
@@ -199,6 +210,10 @@ export default {
               color: var(--theme-color);
               opacity: 0;
             }
+          }
+
+          &.side-bar-nav-icon-animation {
+            transform: translateY(calc(0px - var(--spacer-3)));
           }
         }
         > span {
@@ -233,7 +248,6 @@ export default {
     > li {
       > a.side-bar-router-link {
         transition: all 200ms;
-        opacity: 0.6;
 
         &:hover {
           background-color: rgba(127, 127, 127, 0.05);
@@ -245,8 +259,8 @@ export default {
         }
 
         &.router-link-active {
-          opacity: 1;
           background-color: var(--bg-color-hover);
+          font-weight: bold;
           > .icon {
             > i {
               &.fillIcon {
@@ -269,7 +283,7 @@ export default {
 #side-bar-nav {
   ul.border-layer {
     opacity: 0;
-    transition: opacity 200ms;
+    transition: opacity 400ms;
     -webkit-mask-image: radial-gradient(
       circle at center,
       white 0%,
