@@ -1,7 +1,7 @@
 <template>
-  <button class="menu-switch-button" @click="switchMenu(), animation()">
+  <ripple-button class="menu-switch-button" @click="switchMenu(), animation()">
     <i class="segoe-fluent-icons" id="menu-switch-icon">&#xe700;</i>
-  </button>
+  </ripple-button>
 </template>
 
 <script>

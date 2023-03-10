@@ -7,13 +7,13 @@
       placement="bottom-end"
     >
       <template #reference>
-        <button @click="animation()">
+        <ripple-button @click="animation()">
           <img
             id="avatar-image"
             src="http://q1.qlogo.cn/g?b=qq&nk=570446022&s=4"
             alt="头像"
           />
-        </button>
+        </ripple-button>
       </template>
     </van-popover>
   </div>
@@ -141,7 +141,7 @@ export default {
     padding: 0;
     font-size: 14px;
 
-    > img {
+    img {
       width: var(--spacer-8);
       height: var(--spacer-8);
       border-radius: 50%;

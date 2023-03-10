@@ -1,10 +1,10 @@
 <template>
   <div class="dark-mode-switch-button-div">
-    <button @click="darkMode()">
+    <ripple-button @click="darkMode()">
       <i class="segoe-fluent-icons" id="dark-mode-switch-icon">
         {{ darkmodeButonTooltip.icon }}
       </i>
-    </button>
+    </ripple-button>
   </div>
 </template>
 <script>

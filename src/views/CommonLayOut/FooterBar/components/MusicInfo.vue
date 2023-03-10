@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-bar-info">
+  <ripple-button class="footer-bar-info">
     <div class="cover">
       <img src="@/assets/uploads/月亮警察.webp" alt="月亮警察" />
     </div>
@@ -7,7 +7,7 @@
       <span class="name">月亮警察</span>
       <span class="singer">火箭少女101</span>
     </div>
-  </div>
+  </ripple-button>
 </template>
 <style lang="less" scoped>
 .footer-bar-info {
@@ -15,6 +15,8 @@
   height: 100%;
   padding-right: var(--spacer-6);
   cursor: pointer;
+  border: none;
+  background: transparent;
 
   .cover {
     position: relative;

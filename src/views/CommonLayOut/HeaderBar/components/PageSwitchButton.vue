@@ -1,11 +1,11 @@
 <template>
   <div class="page-switch-button-div">
-    <button @click="pageSwitching(-1), animation($event)">
+    <ripple-button @click="pageSwitching(-1), animation($event)">
       <i class="segoe-fluent-icons">&#xe973;</i>
-    </button>
-    <button @click="pageSwitching(1), animation($event)">
+    </ripple-button>
+    <ripple-button @click="pageSwitching(1), animation($event)">
       <i class="segoe-fluent-icons">&#xe974;</i>
-    </button>
+    </ripple-button>
   </div>
 </template>
 <script>
@@ -13,8 +13,8 @@ export default {
   methods: {
     animation(e) {
       //延迟动画
-      //获得点击元素的第一个子元素
-      const icon = e.currentTarget.firstElementChild
+      //获得点击元素的第一个子元素的第一个子元素
+      const icon = e.currentTarget.firstElementChild.firstElementChild
       icon.classList.add('page-switch-icon-animation')
       setTimeout(function () {
         icon.classList.remove('page-switch-icon-animation')

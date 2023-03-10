@@ -15,6 +15,9 @@ import { Dialog } from 'vant'
 // 2. 引入组件样式
 import 'vant/lib/index.css'
 
+//自定义组件
+import RippleButton from '@/components/ripple-button.vue'
+
 //自定义样式表
 import './assets/css/base.css'
 import './assets/css/common.css'
@@ -29,6 +32,7 @@ app.use(NavBar)
 app.use(Toast)
 app.use(Popover)
 app.use(Dialog)
+app.component('RippleButton', RippleButton)
 
 app.use(router)
 app.mount('#app')

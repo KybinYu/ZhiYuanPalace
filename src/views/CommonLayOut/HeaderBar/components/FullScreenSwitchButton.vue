@@ -1,8 +1,8 @@
 <template>
   <div class="full-screen-switch-button-div">
-    <button>
+    <ripple-button>
       <i class="segoe-fluent-icons">&#xe740;</i>
-    </button>
+    </ripple-button>
   </div>
 </template>
 <style lang="less" scoped>

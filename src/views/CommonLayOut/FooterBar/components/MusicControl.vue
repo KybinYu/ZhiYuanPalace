@@ -1,19 +1,19 @@
 <template>
   <div class="footer-bar-control">
     <div class="prev">
-      <button>
+      <ripple-button>
         <i class="segoe-fluent-icons">&#xf8ac;</i>
-      </button>
+      </ripple-button>
     </div>
     <div class="play">
-      <button class="set-background">
+      <ripple-button class="set-background">
         <i class="segoe-fluent-icons">&#xedda;</i>
-      </button>
+      </ripple-button>
     </div>
     <div class="next">
-      <button>
+      <ripple-button>
         <i class="segoe-fluent-icons">&#xf8ad;</i>
-      </button>
+      </ripple-button>
     </div>
   </div>
 </template>

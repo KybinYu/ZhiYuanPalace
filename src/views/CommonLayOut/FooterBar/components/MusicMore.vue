@@ -1,12 +1,14 @@
 <template>
   <div class="footer-bar-more">
     <div class="music-lyric-button">
-      <button><i class="segoe-fluent-icons">词</i></button>
+      <ripple-button>
+        <i class="segoe-fluent-icons">词</i>
+      </ripple-button>
     </div>
     <div class="music-list-button">
-      <button>
+      <ripple-button>
         <i class="segoe-fluent-icons">&#xe90b;</i>
-      </button>
+      </ripple-button>
     </div>
   </div>
 </template>
