@@ -20,6 +20,11 @@
     padding: 0;
     font-size: var(--font-size-m);
 
+    i.segoe-fluent-icons {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     &:hover {
       color: var(--td-brand-color);
       background-color: var(--button-hover-bg);

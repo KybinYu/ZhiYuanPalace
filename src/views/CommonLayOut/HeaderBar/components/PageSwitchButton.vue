@@ -50,6 +50,7 @@ export default {
       display: inline-block;
       transform: none;
       transition: all 400ms;
+      vertical-align: middle;
       &.page-switch-icon-animation {
         transform: scale(2, 0.5);
       }

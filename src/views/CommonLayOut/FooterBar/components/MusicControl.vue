@@ -36,10 +36,9 @@
       vertical-align: super;
       padding: 0;
 
-      .segoe-fluent-icons {
+      i.segoe-fluent-icons {
         display: inline-block;
         vertical-align: middle;
-        transform: translateY(-2px);
       }
 
       &:hover {
@@ -49,14 +48,11 @@
 
     &.play {
       button {
-        font-size: 20px;
+        font-size: var(--font-size-xl);
         color: inherit;
         background: var(--bg-color-hover);
         border-radius: 50%;
         transform: scale(0.8);
-        i {
-          transform: translateY(-4px);
-        }
       }
 
       &:hover {

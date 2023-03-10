@@ -13,12 +13,12 @@
 .footer-bar-info {
   display: flex;
   height: 100%;
-  padding-right: 18px;
+  padding-right: var(--spacer-6);
   cursor: pointer;
 
   .cover {
     position: relative;
-    margin-right: 18px;
+    margin-right: var(--spacer-6);
 
     img {
       width: var(--footer-bar-height);
@@ -48,18 +48,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 14px;
+    font-size: var(--font-size-m);
 
     span {
       display: block;
       white-space: nowrap;
 
       &.name {
-        font-size: 12px;
+        font-size: var(--font-size-s);
         font-weight: 700;
       }
       &.singer {
-        font-size: 12px;
+        font-size: var(--font-size-s);
       }
     }
   }

@@ -94,6 +94,7 @@ export default {
 
     i#dark-mode-switch-icon {
       display: inline-block;
+      vertical-align: middle;
 
       &.dark-mode-switch-icon-animation-begin {
         transition: all 400ms;

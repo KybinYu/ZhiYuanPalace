@@ -28,18 +28,22 @@
       cursor: pointer;
       vertical-align: super;
       padding: 0;
-      font-size: 16px;
+      font-size: var(--font-size-l);
+
+      i.segoe-fluent-icons {
+        display: inline-block;
+        vertical-align: middle;
+      }
 
       &:hover {
         background-color: var(--button-hover-bg);
       }
     }
     &.music-lyric-button > button {
-      font-size: 14px;
+      font-size: var(--font-size-m);
 
       i.segoe-fluent-icons {
-        display: inline-block;
-        transform: translateY(-2px);
+        transform: translateY(calc(0px - var(--spacer-2)));
       }
     }
   }

@@ -48,6 +48,7 @@ export default {
   i#menu-switch-icon {
     transition: all 200ms;
     display: inline-block;
+    vertical-align: middle;
 
     &.menu-switch-icon-animation {
       transition: all 200ms;
