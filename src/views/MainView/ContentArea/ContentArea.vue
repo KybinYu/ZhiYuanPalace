@@ -1,5 +1,5 @@
 <template>
-  <router-view class="content" id="router-view" v-slot="{ Component }">
+  <router-view class="content-area-inner" v-slot="{ Component }">
     <transition :name="transitionName">
       <component :is="Component" />
     </transition>
@@ -29,13 +29,13 @@ export default {
 }
 </script>
 <style>
-#main-view {
+#content-area {
   background-color: var(--bg-color-brighter);
   border-radius: var(--border-radius-m) 0 0 0;
   border-top: var(--spacer-1) solid var(--border-color);
   border-left: var(--spacer-1) solid var(--border-color);
 }
-.content {
+.content-area-inner {
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .transition-next-enter-active,

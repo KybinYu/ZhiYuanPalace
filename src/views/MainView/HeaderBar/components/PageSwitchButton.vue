@@ -1,5 +1,5 @@
 <template>
-  <div class="page-switch-button-div">
+  <div class="page-switch-button-root">
     <ripple-button @click="pageSwitching(-1), animation($event)">
       <i class="segoe-fluent-icons">&#xe973;</i>
     </ripple-button>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.page-switch-button-div {
+.page-switch-button-root {
   display: flex;
   height: 100%;
 
@@ -65,7 +65,7 @@ export default {
 
 //移动端隐藏元素
 @media (max-width: 699.99px) {
-  .page-switch-button-div {
+  .page-switch-button-root {
     display: none;
   }
 }

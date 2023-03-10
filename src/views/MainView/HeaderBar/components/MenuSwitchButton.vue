@@ -16,17 +16,17 @@ export default {
       }, 200)
     },
     switchMenu() {
-      const layoutRoot = document.getElementById('layout-root')
-      if (layoutRoot) {
-        if (layoutRoot.classList.contains('menu-switch')) {
-          layoutRoot.classList.remove('menu-switch')
+      const mainViewRoot = document.getElementById('main-view-inner')
+      if (mainViewRoot) {
+        if (mainViewRoot.classList.contains('menu-switch')) {
+          mainViewRoot.classList.remove('menu-switch')
         } else {
-          layoutRoot.classList.add('menu-switch')
+          mainViewRoot.classList.add('menu-switch')
         }
-        if (layoutRoot.classList.contains('menu-open')) {
-          layoutRoot.classList.remove('menu-open')
+        if (mainViewRoot.classList.contains('menu-open')) {
+          mainViewRoot.classList.remove('menu-open')
         } else {
-          layoutRoot.classList.add('menu-open')
+          mainViewRoot.classList.add('menu-open')
         }
       }
     }

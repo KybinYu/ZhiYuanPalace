@@ -1,5 +1,5 @@
 <template>
-  <div class="dark-mode-switch-button-div">
+  <div class="dark-mode-switch-button-root">
     <ripple-button @click="darkMode()">
       <i class="segoe-fluent-icons" id="dark-mode-switch-icon">
         {{ darkmodeButonTooltip.icon }}
@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.dark-mode-switch-button-div {
+.dark-mode-switch-button-root {
   display: flex;
   height: 100%;
   overflow: hidden;

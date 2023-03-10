@@ -28,7 +28,7 @@
   </nav>
 </template>
 <script setup>
-import Indicator from './Indicator.vue'
+import Indicator from './components/Indicator.vue'
 </script>
 <script>
 export default {
@@ -111,9 +111,9 @@ export default {
   methods: {
     borderAnimation() {
       const borderLayer = document.querySelector('.border-layer')
-      const asidebar = document.querySelector('.layout-left')
-      if (asidebar && borderLayer) {
-        asidebar.addEventListener('mousemove', function (event) {
+      const sidebar = document.querySelector('#side-bar')
+      if (sidebar && borderLayer) {
+        sidebar.addEventListener('mousemove', function (event) {
           let x = event.pageX
           let y = event.pageY
           let bounding = borderLayer.getBoundingClientRect()
@@ -127,11 +127,11 @@ export default {
       }
     },
     closeMenu() {
-      const layoutRoot = document.getElementById('layout-root')
-      if (layoutRoot) {
-        if (layoutRoot.classList.contains('menu-open')) {
+      const mainViewRoot = document.getElementById('main-view-inner')
+      if (mainViewRoot) {
+        if (mainViewRoot.classList.contains('menu-open')) {
           setTimeout(function () {
-            layoutRoot.classList.remove('menu-open')
+            mainViewRoot.classList.remove('menu-open')
           }, 400)
         }
       }

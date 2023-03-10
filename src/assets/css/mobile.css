@@ -1,8 +1,10 @@
 /* 移动适配 */
 :root[device|="mobile"] button:not(.set-background):hover,
-:root[device|="mobile"] div:not(.set-background):hover,
 :root[device|="mobile"] input[type='submit']:hover {
   background: transparent !important;
+}
+:root[device|="mobile"] button:not(.set-background):hover *::after {
+  visibility: hidden;
 }
 :root[device|='mobile'] ul.border-layer {
   display: none;

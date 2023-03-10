@@ -1,12 +1,12 @@
 <template>
-  <div class="full-screen-switch-button-div">
+  <div class="full-screen-switch-button-root">
     <ripple-button>
       <i class="segoe-fluent-icons">&#xe740;</i>
     </ripple-button>
   </div>
 </template>
 <style lang="less" scoped>
-.full-screen-switch-button-div {
+.full-screen-switch-button-root {
   display: flex;
   height: 100%;
 
@@ -34,7 +34,7 @@
 
 //移动端隐藏元素
 @media (max-width: 699.99px) {
-  .full-screen-switch-button-div {
+  .full-screen-switch-button-root {
     display: none;
   }
 }

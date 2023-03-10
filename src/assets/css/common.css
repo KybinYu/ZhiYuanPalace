@@ -25,6 +25,9 @@
   --button-hover-bg: rgba(127, 127, 127, 0.1);
   --overlay-bg: rgba(0, 0, 0, 0.3);
   --ripple-button-bg: rgba(127, 127, 127, 0.2);
+  --header-bar-z-index: 10;
+  --footer-bar-z-index: 11;
+  --side-bar-z-index: 12;
 }
 :root {
   --theme-color: #ffc7e4;

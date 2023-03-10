@@ -1,8 +1,8 @@
 <template>
-  <common-lay-out />
+  <main-view />
 </template>
 <script setup>
-import CommonLayOut from '@/views/CommonLayOut/CommonLayOut.vue'
+import MainView from '@/views/MainView/MainView.vue'
 </script>
 <script>
 export default {
@@ -20,6 +20,18 @@ export default {
     } else {
       document.documentElement.setAttribute('device', 'pc')
     }
+    // this.$refs.layoutSwipeRoot.next()
   }
 }
 </script>
+<style>
+#app {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+</style>

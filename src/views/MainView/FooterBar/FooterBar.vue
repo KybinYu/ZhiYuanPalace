@@ -12,7 +12,7 @@
   </div>
 </template>
 <script setup>
-import MusicInfo from './components/MusicInfo.vue'
+import MusicInfo from './components/MusicInfo/MusicInfo.vue'
 import MusicControl from './components/MusicControl.vue'
 import MusicMore from './components/MusicMore.vue'
 </script>

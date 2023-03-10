@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/CommonLayOut/MainView/pages/HomePage.vue'
+import HomeView from '../views/MainView/ContentArea/pages/HomePage.vue'
 
 const routes = [
   {
@@ -13,13 +13,8 @@ const routes = [
   {
     path: '/article',
     name: 'article',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
-      import(
-        /* webpackChunkName: "about" */ '../views/CommonLayOut/MainView/pages/ArticlePage.vue'
-      ),
+      import('../views/MainView/ContentArea/pages/ArticlePage.vue'),
     meta: {
       index: 2
     }
@@ -28,7 +23,7 @@ const routes = [
     path: '/shuoshuo',
     name: 'shuoshuo',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/ShuoShuoPage.vue'),
+      import('../views/MainView/ContentArea/pages/ShuoShuoPage.vue'),
     meta: {
       index: 3
     }
@@ -37,7 +32,7 @@ const routes = [
     path: '/photo',
     name: 'photo',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/PhotoPage.vue'),
+      import('../views/MainView/ContentArea/pages/PhotoPage.vue'),
     meta: {
       index: 4
     }
@@ -46,7 +41,7 @@ const routes = [
     path: '/video',
     name: 'video',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/VideoPage.vue'),
+      import('../views/MainView/ContentArea/pages/VideoPage.vue'),
     meta: {
       index: 5
     }
@@ -55,7 +50,7 @@ const routes = [
     path: '/music',
     name: 'music',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/MusicPage.vue'),
+      import('../views/MainView/ContentArea/pages/MusicPage.vue'),
     meta: {
       index: 6
     }
@@ -64,7 +59,7 @@ const routes = [
     path: '/netdisk',
     name: 'netdisk',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/NetdiskPage.vue'),
+      import('../views/MainView/ContentArea/pages/NetdiskPage.vue'),
     meta: {
       index: 7
     }
@@ -73,7 +68,7 @@ const routes = [
     path: '/siteurl',
     name: 'siteurl',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/SiteUrlPage.vue'),
+      import('../views/MainView/ContentArea/pages/SiteUrlPage.vue'),
     meta: {
       index: 8
     }
@@ -82,7 +77,7 @@ const routes = [
     path: '/about',
     name: 'about',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/AboutPage.vue'),
+      import('../views/MainView/ContentArea/pages/AboutPage.vue'),
     meta: {
       index: 9
     }
@@ -91,7 +86,7 @@ const routes = [
     path: '/friend',
     name: 'friend',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/FriendPage.vue'),
+      import('../views/MainView/ContentArea/pages/FriendPage.vue'),
     meta: {
       index: 10
     }
@@ -100,7 +95,7 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () =>
-      import('../views/CommonLayOut/MainView/pages/LoginPage.vue'),
+      import('../views/MainView/ContentArea/pages/LoginPage.vue'),
     meta: {
       index: 11
     }

@@ -11,6 +11,7 @@ import { NavBar } from 'vant'
 import { Toast } from 'vant'
 import { Popover } from 'vant'
 import { Dialog } from 'vant'
+import { Swipe, SwipeItem } from 'vant'
 
 // 2. 引入组件样式
 import 'vant/lib/index.css'
@@ -32,6 +33,8 @@ app.use(NavBar)
 app.use(Toast)
 app.use(Popover)
 app.use(Dialog)
+app.use(Swipe)
+app.use(SwipeItem)
 app.component('RippleButton', RippleButton)
 
 app.use(router)

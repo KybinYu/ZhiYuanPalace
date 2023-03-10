@@ -2,9 +2,11 @@
 
 //移动端取消hover颜色
 :root[device|="mobile"] button:not(.set-background):hover,
-:root[device|="mobile"] div:not(.set-background):hover,
 :root[device|="mobile"] input[type='submit']:hover {
   background: transparent !important;
+}
+:root[device|="mobile"] button:not(.set-background):hover *::after {
+  visibility: hidden;
 }
 
 //移动端隐藏侧边导航的探照灯
