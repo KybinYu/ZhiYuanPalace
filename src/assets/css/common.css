@@ -141,8 +141,8 @@ button {
   font-family: 'segoe-fluent-icons' !important;
   font-style: normal;
   font-weight: bold;
-  font-display: swap;
   -webkit-font-display: swap;
+  font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,5 +1,5 @@
 <template>
-  <button class="ripple-button">
+  <button class="ripple-button" type="button">
     <span class="ripple-button-inner"><slot /></span>
     <div
       ref="ripple-button-ripple"
