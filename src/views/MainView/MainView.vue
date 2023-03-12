@@ -89,17 +89,17 @@ import SideBar from './SideBar/SideBar.vue'
 /* 布局切换 */
 
 //电脑布局
-@media (min-width: 1020px) {
+@media (min-width: 1200px) {
   #main-view-inner {
     &.menu-switch {
-      --side-bar-width: 80px !important;
+      --side-bar-width: calc(var(--spacer-10) + var(--spacer-6) * 2) !important;
     }
   }
 }
 //平板布局
-@media (max-width: 1019.99px) {
+@media (max-width: 1200px) {
   #main-view-inner {
-    --side-bar-width: 80px !important;
+    --side-bar-width: calc(var(--spacer-10) + var(--spacer-6) * 2) !important;
     .menu-switch-button {
       display: none;
     }
@@ -107,7 +107,7 @@ import SideBar from './SideBar/SideBar.vue'
 }
 
 //手机布局
-@media (max-width: 499.99px) {
+@media (max-width: 500px) {
   #main-view-inner {
     --side-bar-width: 100% !important;
 

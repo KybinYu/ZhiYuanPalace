@@ -33,7 +33,7 @@
 }
 
 //移动端隐藏元素
-@media (max-width: 699.99px) {
+@media (max-width: 500px) {
   .full-screen-switch-button-root {
     display: none;
   }

@@ -6,27 +6,30 @@
   </router-view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      transitionName: ''
-    }
-  },
-  //监听路由的路径，可以通过不同的路径去选择不同的切换效果
-  watch: {
-    //使用watch 监听$router的变化
-    $route(to, from) {
-      //如果to索引大于from索引,判断为前进状态,反之则为后退状态
-      if (to.meta.index > from.meta.index) {
-        //向下导航，bottom先走，top后走
-        this.transitionName = 'transition-next'
-      } else {
-        this.transitionName = 'transition-prev'
-      }
+<script setup>
+import { watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { reactive, toRef } from 'vue'
+
+const obj = reactive({
+  transitionName: ''
+})
+const transitionName = toRef(obj, 'transitionName')
+
+let router = useRouter()
+
+watch(
+  () => router.currentRoute.value,
+  (to, from) => {
+    // console.log(to.meta.index)
+    // console.log(from.meta.index)
+    if (to.meta.index > from.meta.index) {
+      transitionName.value = 'transition-next'
+    } else {
+      transitionName.value = 'transition-prev'
     }
   }
-}
+)
 </script>
 <style>
 #content-area {

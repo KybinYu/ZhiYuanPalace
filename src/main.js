@@ -18,6 +18,8 @@ import 'vant/lib/index.css'
 
 //自定义组件
 import RippleButton from '@/components/ripple-button.vue'
+import SwipePanelEnd from '@/components/swipe-panel-end.vue'
+import SwipePanelStart from '@/components/swipe-panel-start.vue'
 
 //自定义样式表
 import './assets/css/base.css'
@@ -36,6 +38,8 @@ app.use(Dialog)
 app.use(Swipe)
 app.use(SwipeItem)
 app.component('RippleButton', RippleButton)
+app.component('SwipePanelEnd', SwipePanelEnd)
+app.component('SwipePanelStart', SwipePanelStart)
 
 app.use(router)
 app.mount('#app')

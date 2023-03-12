@@ -6,18 +6,17 @@
     </form>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      searchicon: '\ue721'
-    }
-  }
-}
+<script setup>
+import { reactive, toRef } from 'vue'
+
+const obj = reactive({
+  searchicon: '\ue721'
+})
+const searchicon = toRef(obj, 'searchicon')
 </script>
 <style lang="less" scoped>
 .search-bar {
-  width: 400px;
+  width: var(--spacer-17);
   position: relative;
 
   form {
@@ -69,13 +68,13 @@ export default {
   }
 }
 
-@media (max-width: 1139.99px) {
+@media (max-width: 1200px) {
   .search-bar {
-    width: 220px;
+    width: var(--spacer-15);
   }
 }
 
-@media (max-width: 499.99px) {
+@media (max-width: 500px) {
   .search-bar {
     display: none;
     position: fixed;

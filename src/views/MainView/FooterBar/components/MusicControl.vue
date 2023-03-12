@@ -27,6 +27,7 @@
     line-height: var(--footer-bar-height);
 
     > button {
+      font-size: var(--font-size-l);
       height: 100%;
       width: 100%;
       border: 0;

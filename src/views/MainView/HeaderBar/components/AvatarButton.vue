@@ -18,73 +18,50 @@
     </van-popover>
   </div>
 </template>
-<script>
+<script setup>
 import { ref } from 'vue'
 import { showConfirmDialog } from 'vant'
+import { useRouter } from 'vue-router'
 
-export default {
-  setup() {
-    const showPopover = ref(false)
+const router = useRouter()
 
-    // 通过 actions 属性来定义菜单选项
-    const actions = [
-      { text: '选项一', id: '1' },
-      { text: '选项二', id: '2' },
-      { text: '登录', id: '3' }
-    ]
-
-    return {
-      actions,
-      showPopover
-    }
-  },
-  methods: {
-    animation() {
-      //延迟动画
-      const icon = document.querySelector('#avatar-image')
-      icon.classList.add('avatar-image-animation')
-      setTimeout(function () {
-        icon.classList.remove('avatar-image-animation')
-      }, 280)
-    },
-    loginSelectInit() {
-      /*
-      初始化登录按钮显示的文字
-      TODO:这里需要判断是否已经登录
-      */
-      let isLogged = false
-      if (isLogged == true) {
-        this.actions[2].text = '进入后宫'
-      }
-    },
-    onSelect(action) {
-      if (action.id == 1) {
-      } else if (action.id == 2) {
-      } else {
-        /*
+const showPopover = ref(false)
+const actions = [
+  { text: '选项一', id: '1' },
+  { text: '选项二', id: '2' },
+  { text: '进入后宫', id: '3' }
+]
+function animation() {
+  //延迟动画
+  const icon = document.querySelector('#avatar-image')
+  icon.classList.add('avatar-image-animation')
+  setTimeout(function () {
+    icon.classList.remove('avatar-image-animation')
+  }, 280)
+}
+function onSelect(action) {
+  if (action.id == 1) {
+  } else if (action.id == 2) {
+  } else {
+    /*
         前台登录功能入口
         TODO:这里需要判断是否已经登录
         */
-        let isLogged = false
-        if (isLogged == false) {
-          //弹出登录确认框
-          showConfirmDialog({
-            title: '提示',
-            message: '您还没有登录，是否要现在登录？'
-          })
-            .then(() => {
-              // on confirm
-              this.$router.push('/login')
-            })
-            .catch(() => {
-              // on cancel
-            })
-        }
-      }
+    let isLogged = false
+    if (isLogged == false) {
+      //弹出登录确认框
+      showConfirmDialog({
+        title: '提示',
+        message: '您还没有登录，是否要现在登录？'
+      })
+        .then(() => {
+          // on confirm
+          router.push('/login')
+        })
+        .catch(() => {
+          // on cancel
+        })
     }
-  },
-  mounted() {
-    this.loginSelectInit()
   }
 }
 </script>

@@ -9,7 +9,8 @@
 :root[device|='mobile'] ul.border-layer {
   display: none;
 }
-@media (max-width: 499.99px) {
+/*手机竖*/
+@media (max-width: 500px) {
   :root {
     --font-size-xs: 2.66666667vw;
     --font-size-s: 3.2vw;
@@ -40,5 +41,139 @@
     --spacer-19: 170.66666667vw;
     --spacer-20: 256vw;
     --spacer-21: 320vw;
+  }
+}
+/*平板竖*/
+@media (min-width: 500px) and (max-width: 900px) {
+  :root {
+    --font-size-xs: 1.30208333vw;
+    --font-size-s: 1.5625vw;
+    --font-size-m: 1.82291667vw;
+    --font-size-l: 2.08333333vw;
+    --font-size-xl: 2.34375vw;
+  }
+  :root {
+    --spacer-0: 0vw;
+    --spacer-1: 0.13020833vw;
+    --spacer-2: 0.26041667vw;
+    --spacer-3: 0.52083333vw;
+    --spacer-4: 1.04166667vw;
+    --spacer-5: 1.5625vw;
+    --spacer-6: 2.08333333vw;
+    --spacer-7: 3.125vw;
+    --spacer-8: 4.16666667vw;
+    --spacer-9: 5.20833333vw;
+    --spacer-10: 6.25vw;
+    --spacer-11: 7.29166667vw;
+    --spacer-12: 8.33333333vw;
+    --spacer-13: 12.5vw;
+    --spacer-14: 20.83333333vw;
+    --spacer-15: 31.25vw;
+    --spacer-16: 41.66666667vw;
+    --spacer-17: 62.5vw;
+    --spacer-18: 72.91666667vw;
+    --spacer-19: 83.33333333vw;
+    --spacer-20: 125vw;
+    --spacer-21: 156.25vw;
+  }
+}
+/*平板横*/
+@media (min-width: 900px) and (max-width: 1200px) {
+  :root {
+    --font-size-xs: 0.9765625vw;
+    --font-size-s: 1.171875vw;
+    --font-size-m: 1.3671875vw;
+    --font-size-l: 1.5625vw;
+    --font-size-xl: 1.7578125vw;
+  }
+  :root {
+    --spacer-0: 0vw;
+    --spacer-1: 0.09765625vw;
+    --spacer-2: 0.1953125vw;
+    --spacer-3: 0.390625vw;
+    --spacer-4: 0.78125vw;
+    --spacer-5: 1.171875vw;
+    --spacer-6: 1.5625vw;
+    --spacer-7: 2.34375vw;
+    --spacer-8: 3.125vw;
+    --spacer-9: 3.90625vw;
+    --spacer-10: 4.6875vw;
+    --spacer-11: 5.46875vw;
+    --spacer-12: 6.25vw;
+    --spacer-13: 9.375vw;
+    --spacer-14: 15.625vw;
+    --spacer-15: 23.4375vw;
+    --spacer-16: 31.25vw;
+    --spacer-17: 46.875vw;
+    --spacer-18: 54.6875vw;
+    --spacer-19: 62.5vw;
+    --spacer-20: 93.75vw;
+    --spacer-21: 117.1875vw;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  :root {
+    --font-size-xs: 0.83333333vw;
+    --font-size-s: 1vw;
+    --font-size-m: 1.16666667vw;
+    --font-size-l: 1.33333333vw;
+    --font-size-xl: 1.5vw;
+  }
+  :root {
+    --spacer-0: 0vw;
+    --spacer-1: 0.08333333vw;
+    --spacer-2: 0.16666667vw;
+    --spacer-3: 0.33333333vw;
+    --spacer-4: 0.66666667vw;
+    --spacer-5: 1vw;
+    --spacer-6: 1.33333333vw;
+    --spacer-7: 2vw;
+    --spacer-8: 2.66666667vw;
+    --spacer-9: 3.33333333vw;
+    --spacer-10: 4vw;
+    --spacer-11: 4.66666667vw;
+    --spacer-12: 5.33333333vw;
+    --spacer-13: 8vw;
+    --spacer-14: 13.33333333vw;
+    --spacer-15: 20vw;
+    --spacer-16: 26.66666667vw;
+    --spacer-17: 40vw;
+    --spacer-18: 46.66666667vw;
+    --spacer-19: 53.33333333vw;
+    --spacer-20: 80vw;
+    --spacer-21: 100vw;
+  }
+}
+@media (min-width: 1500px) {
+  :root {
+    --font-size-xs: 0.66666667vw;
+    --font-size-s: 0.8vw;
+    --font-size-m: 0.93333333vw;
+    --font-size-l: 1.06666667vw;
+    --font-size-xl: 1.2vw;
+  }
+  :root {
+    --spacer-0: 0vw;
+    --spacer-1: 0.06666667vw;
+    --spacer-2: 0.13333333vw;
+    --spacer-3: 0.26666667vw;
+    --spacer-4: 0.53333333vw;
+    --spacer-5: 0.8vw;
+    --spacer-6: 1.06666667vw;
+    --spacer-7: 1.6vw;
+    --spacer-8: 2.13333333vw;
+    --spacer-9: 2.66666667vw;
+    --spacer-10: 3.2vw;
+    --spacer-11: 3.73333333vw;
+    --spacer-12: 4.26666667vw;
+    --spacer-13: 6.4vw;
+    --spacer-14: 10.66666667vw;
+    --spacer-15: 16vw;
+    --spacer-16: 21.33333333vw;
+    --spacer-17: 32vw;
+    --spacer-18: 37.33333333vw;
+    --spacer-19: 42.66666667vw;
+    --spacer-20: 64vw;
+    --spacer-21: 80vw;
   }
 }

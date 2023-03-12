@@ -7,75 +7,75 @@
     </ripple-button>
   </div>
 </template>
-<script>
+
+<script setup>
 import { showToast } from 'vant'
-export default {
-  data() {
-    return {
-      darkmodeButonTooltip: {
-        msg: '夜间模式',
-        icon: '\ue708'
-      }
-    }
-  },
-  methods: {
-    darkMode() {
-      const icon = document.querySelector('#dark-mode-switch-icon')
-      if (!document.documentElement.getAttribute('theme-mode')) {
-        //切换主题
-        document.documentElement.setAttribute('theme-mode', 'dark')
-        //适配vant组件
-        document.documentElement.classList.add('van-theme-dark')
+import { reactive, toRef } from 'vue'
 
-        //弹出提示
-        showToast({
-          position: 'bottom',
-          message: '夜间模式已开启',
-          icon: 'https://pan.yiru.love/static/images/emoji/1f634.webp'
-        })
+const obj = reactive({
+  darkmodeButonTooltip: {
+    msg: '夜间模式',
+    icon: '\ue708'
+  }
+})
+const darkmodeButonTooltip = toRef(obj, 'darkmodeButonTooltip')
 
-        //延迟更换图标，配合动画
-        icon.classList.add('dark-mode-switch-icon-animation-begin')
-        var th = this
-        setTimeout(function () {
-          icon.classList.remove('dark-mode-switch-icon-animation-begin')
-          icon.classList.add('dark-mode-switch-icon-animation-end')
-          th.darkmodeButonTooltip.msg = '日间模式'
-          th.darkmodeButonTooltip.icon = '\ue706'
-          setTimeout(function () {
-            icon.classList.remove('dark-mode-switch-icon-animation-end')
-          }, 400)
-        }, 200)
-      } else {
-        //切换主题
-        document.documentElement.removeAttribute('theme-mode')
-        //适配vant组件
-        document.documentElement.classList.remove('van-theme-dark')
+function darkMode() {
+  const icon = document.querySelector('#dark-mode-switch-icon')
+  if (!document.documentElement.getAttribute('theme-mode')) {
+    //切换主题
+    document.documentElement.setAttribute('theme-mode', 'dark')
+    //适配vant组件
+    document.documentElement.classList.add('van-theme-dark')
 
-        //弹出提示
-        showToast({
-          position: 'bottom',
-          message: '夜间模式已关闭',
-          icon: 'https://pan.yiru.love/static/images/emoji/1f60e.webp'
-        })
+    //弹出提示
+    showToast({
+      position: 'bottom',
+      message: '夜间模式已开启',
+      icon: 'https://pan.yiru.love/static/images/emoji/1f634.webp'
+    })
 
-        //延迟更换图标，配合动画
-        icon.classList.add('dark-mode-switch-icon-animation-begin')
-        var th = this
-        setTimeout(function () {
-          icon.classList.remove('dark-mode-switch-icon-animation-begin')
-          icon.classList.add('dark-mode-switch-icon-animation-end')
-          th.darkmodeButonTooltip.msg = '夜间模式'
-          th.darkmodeButonTooltip.icon = '\ue708'
-          setTimeout(function () {
-            icon.classList.remove('dark-mode-switch-icon-animation-end')
-          }, 600)
-        }, 300)
-      }
-    }
+    //延迟更换图标，配合动画
+    icon.classList.add('dark-mode-switch-icon-animation-begin')
+    var th = this
+    setTimeout(function () {
+      icon.classList.remove('dark-mode-switch-icon-animation-begin')
+      icon.classList.add('dark-mode-switch-icon-animation-end')
+      th.darkmodeButonTooltip.msg = '日间模式'
+      th.darkmodeButonTooltip.icon = '\ue706'
+      setTimeout(function () {
+        icon.classList.remove('dark-mode-switch-icon-animation-end')
+      }, 400)
+    }, 200)
+  } else {
+    //切换主题
+    document.documentElement.removeAttribute('theme-mode')
+    //适配vant组件
+    document.documentElement.classList.remove('van-theme-dark')
+
+    //弹出提示
+    showToast({
+      position: 'bottom',
+      message: '夜间模式已关闭',
+      icon: 'https://pan.yiru.love/static/images/emoji/1f60e.webp'
+    })
+
+    //延迟更换图标，配合动画
+    icon.classList.add('dark-mode-switch-icon-animation-begin')
+    var th = this
+    setTimeout(function () {
+      icon.classList.remove('dark-mode-switch-icon-animation-begin')
+      icon.classList.add('dark-mode-switch-icon-animation-end')
+      th.darkmodeButonTooltip.msg = '夜间模式'
+      th.darkmodeButonTooltip.icon = '\ue708'
+      setTimeout(function () {
+        icon.classList.remove('dark-mode-switch-icon-animation-end')
+      }, 600)
+    }, 300)
   }
 }
 </script>
+
 <style lang="less" scoped>
 .dark-mode-switch-button-root {
   display: flex;

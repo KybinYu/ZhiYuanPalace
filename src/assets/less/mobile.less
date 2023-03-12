@@ -17,70 +17,340 @@
 }
 
 //LESS变量
-@ViewWidth: 3.75vw;
-// @ViewHeight: 7.36vh;
+
+//手机端竖屏宽度：基于 iPhone6/7/8 设计
+@PhoneViewWidth: 3.75vw;
+// @PhoneViewHeight: 7.36vh;
+
+//平板端竖屏宽度：基于 iPad 设计
+@PadVerticalViewWidth: 7.68vw;
+// @PhoneViewHeight: 10.24vh;
+
+//平板端横屏宽度：基于 iPad 设计
+@PadHorizontalViewWidth: 10.24vw;
+// @PhoneViewHeight: 7.68vh;
+
+//笔记本宽度：基于 1200px 设计
+@LaptopViewWidth: 12vw;
+
+//PC大屏宽度：基于 1500px 设计
+@PCLargeViewWidth: 15vw;
 
 //计算
-@font-size-xs: (10 / @ViewWidth);
-@font-size-s: (12 / @ViewWidth);
-@font-size-m: (14 / @ViewWidth);
-@font-size-l: (16 / @ViewWidth);
-@font-size-xl: (18 / @ViewWidth);
-@spacer-0: (0 / @ViewWidth);
-@spacer-1: (1 / @ViewWidth);
-@spacer-2: (2 / @ViewWidth);
-@spacer-3: (4 / @ViewWidth);
-@spacer-4: (8 / @ViewWidth);
-@spacer-5: (12 / @ViewWidth);
-@spacer-6: (16 / @ViewWidth);
-@spacer-7: (24 / @ViewWidth);
-@spacer-8: (32 / @ViewWidth);
-@spacer-9: (40 / @ViewWidth);
-@spacer-10: (48 / @ViewWidth);
-@spacer-11: (56 / @ViewWidth);
-@spacer-12: (64 / @ViewWidth);
-@spacer-13: (96 / @ViewWidth);
-@spacer-14: (160 / @ViewWidth);
-@spacer-15: (240 / @ViewWidth);
-@spacer-16: (320 / @ViewWidth);
-@spacer-17: (480 / @ViewWidth);
-@spacer-18: (560 / @ViewWidth);
-@spacer-19: (640 / @ViewWidth);
-@spacer-20: (960 / @ViewWidth);
-@spacer-21: (1200 / @ViewWidth);
+@phone-font-size-xs: (10 / @PhoneViewWidth);
+@phone-font-size-s: (12 / @PhoneViewWidth);
+@phone-font-size-m: (14 / @PhoneViewWidth);
+@phone-font-size-l: (16 / @PhoneViewWidth);
+@phone-font-size-xl: (18 / @PhoneViewWidth);
+@phone-spacer-0: (0 / @PhoneViewWidth);
+@phone-spacer-1: (1 / @PhoneViewWidth);
+@phone-spacer-2: (2 / @PhoneViewWidth);
+@phone-spacer-3: (4 / @PhoneViewWidth);
+@phone-spacer-4: (8 / @PhoneViewWidth);
+@phone-spacer-5: (12 / @PhoneViewWidth);
+@phone-spacer-6: (16 / @PhoneViewWidth);
+@phone-spacer-7: (24 / @PhoneViewWidth);
+@phone-spacer-8: (32 / @PhoneViewWidth);
+@phone-spacer-9: (40 / @PhoneViewWidth);
+@phone-spacer-10: (48 / @PhoneViewWidth);
+@phone-spacer-11: (56 / @PhoneViewWidth);
+@phone-spacer-12: (64 / @PhoneViewWidth);
+@phone-spacer-13: (96 / @PhoneViewWidth);
+@phone-spacer-14: (160 / @PhoneViewWidth);
+@phone-spacer-15: (240 / @PhoneViewWidth);
+@phone-spacer-16: (320 / @PhoneViewWidth);
+@phone-spacer-17: (480 / @PhoneViewWidth);
+@phone-spacer-18: (560 / @PhoneViewWidth);
+@phone-spacer-19: (640 / @PhoneViewWidth);
+@phone-spacer-20: (960 / @PhoneViewWidth);
+@phone-spacer-21: (1200 / @PhoneViewWidth);
 
-//移动端屏幕大小查询器，可以在适配小屏幕手机端的同时，不影响平板、电脑端
-@media (max-width: 499.99px) {
+@pad-vertical-font-size-xs: (10 / @PadVerticalViewWidth);
+@pad-vertical-font-size-s: (12 / @PadVerticalViewWidth);
+@pad-vertical-font-size-m: (14 / @PadVerticalViewWidth);
+@pad-vertical-font-size-l: (16 / @PadVerticalViewWidth);
+@pad-vertical-font-size-xl: (18 / @PadVerticalViewWidth);
+@pad-vertical-spacer-0: (0 / @PadVerticalViewWidth);
+@pad-vertical-spacer-1: (1 / @PadVerticalViewWidth);
+@pad-vertical-spacer-2: (2 / @PadVerticalViewWidth);
+@pad-vertical-spacer-3: (4 / @PadVerticalViewWidth);
+@pad-vertical-spacer-4: (8 / @PadVerticalViewWidth);
+@pad-vertical-spacer-5: (12 / @PadVerticalViewWidth);
+@pad-vertical-spacer-6: (16 / @PadVerticalViewWidth);
+@pad-vertical-spacer-7: (24 / @PadVerticalViewWidth);
+@pad-vertical-spacer-8: (32 / @PadVerticalViewWidth);
+@pad-vertical-spacer-9: (40 / @PadVerticalViewWidth);
+@pad-vertical-spacer-10: (48 / @PadVerticalViewWidth);
+@pad-vertical-spacer-11: (56 / @PadVerticalViewWidth);
+@pad-vertical-spacer-12: (64 / @PadVerticalViewWidth);
+@pad-vertical-spacer-13: (96 / @PadVerticalViewWidth);
+@pad-vertical-spacer-14: (160 / @PadVerticalViewWidth);
+@pad-vertical-spacer-15: (240 / @PadVerticalViewWidth);
+@pad-vertical-spacer-16: (320 / @PadVerticalViewWidth);
+@pad-vertical-spacer-17: (480 / @PadVerticalViewWidth);
+@pad-vertical-spacer-18: (560 / @PadVerticalViewWidth);
+@pad-vertical-spacer-19: (640 / @PadVerticalViewWidth);
+@pad-vertical-spacer-20: (960 / @PadVerticalViewWidth);
+@pad-vertical-spacer-21: (1200 / @PadVerticalViewWidth);
+
+@pad-horizontal-font-size-xs: (10 / @PadHorizontalViewWidth);
+@pad-horizontal-font-size-s: (12 / @PadHorizontalViewWidth);
+@pad-horizontal-font-size-m: (14 / @PadHorizontalViewWidth);
+@pad-horizontal-font-size-l: (16 / @PadHorizontalViewWidth);
+@pad-horizontal-font-size-xl: (18 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-0: (0 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-1: (1 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-2: (2 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-3: (4 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-4: (8 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-5: (12 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-6: (16 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-7: (24 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-8: (32 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-9: (40 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-10: (48 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-11: (56 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-12: (64 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-13: (96 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-14: (160 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-15: (240 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-16: (320 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-17: (480 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-18: (560 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-19: (640 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-20: (960 / @PadHorizontalViewWidth);
+@pad-horizontal-spacer-21: (1200 / @PadHorizontalViewWidth);
+
+@laptop-font-size-xs: (10 / @LaptopViewWidth);
+@laptop-font-size-s: (12 / @LaptopViewWidth);
+@laptop-font-size-m: (14 / @LaptopViewWidth);
+@laptop-font-size-l: (16 / @LaptopViewWidth);
+@laptop-font-size-xl: (18 / @LaptopViewWidth);
+@laptop-spacer-0: (0 / @LaptopViewWidth);
+@laptop-spacer-1: (1 / @LaptopViewWidth);
+@laptop-spacer-2: (2 / @LaptopViewWidth);
+@laptop-spacer-3: (4 / @LaptopViewWidth);
+@laptop-spacer-4: (8 / @LaptopViewWidth);
+@laptop-spacer-5: (12 / @LaptopViewWidth);
+@laptop-spacer-6: (16 / @LaptopViewWidth);
+@laptop-spacer-7: (24 / @LaptopViewWidth);
+@laptop-spacer-8: (32 / @LaptopViewWidth);
+@laptop-spacer-9: (40 / @LaptopViewWidth);
+@laptop-spacer-10: (48 / @LaptopViewWidth);
+@laptop-spacer-11: (56 / @LaptopViewWidth);
+@laptop-spacer-12: (64 / @LaptopViewWidth);
+@laptop-spacer-13: (96 / @LaptopViewWidth);
+@laptop-spacer-14: (160 / @LaptopViewWidth);
+@laptop-spacer-15: (240 / @LaptopViewWidth);
+@laptop-spacer-16: (320 / @LaptopViewWidth);
+@laptop-spacer-17: (480 / @LaptopViewWidth);
+@laptop-spacer-18: (560 / @LaptopViewWidth);
+@laptop-spacer-19: (640 / @LaptopViewWidth);
+@laptop-spacer-20: (960 / @LaptopViewWidth);
+@laptop-spacer-21: (1200 / @LaptopViewWidth);
+
+@pc-large-font-size-xs: (10 / @PCLargeViewWidth);
+@pc-large-font-size-s: (12 / @PCLargeViewWidth);
+@pc-large-font-size-m: (14 / @PCLargeViewWidth);
+@pc-large-font-size-l: (16 / @PCLargeViewWidth);
+@pc-large-font-size-xl: (18 / @PCLargeViewWidth);
+@pc-large-spacer-0: (0 / @PCLargeViewWidth);
+@pc-large-spacer-1: (1 / @PCLargeViewWidth);
+@pc-large-spacer-2: (2 / @PCLargeViewWidth);
+@pc-large-spacer-3: (4 / @PCLargeViewWidth);
+@pc-large-spacer-4: (8 / @PCLargeViewWidth);
+@pc-large-spacer-5: (12 / @PCLargeViewWidth);
+@pc-large-spacer-6: (16 / @PCLargeViewWidth);
+@pc-large-spacer-7: (24 / @PCLargeViewWidth);
+@pc-large-spacer-8: (32 / @PCLargeViewWidth);
+@pc-large-spacer-9: (40 / @PCLargeViewWidth);
+@pc-large-spacer-10: (48 / @PCLargeViewWidth);
+@pc-large-spacer-11: (56 / @PCLargeViewWidth);
+@pc-large-spacer-12: (64 / @PCLargeViewWidth);
+@pc-large-spacer-13: (96 / @PCLargeViewWidth);
+@pc-large-spacer-14: (160 / @PCLargeViewWidth);
+@pc-large-spacer-15: (240 / @PCLargeViewWidth);
+@pc-large-spacer-16: (320 / @PCLargeViewWidth);
+@pc-large-spacer-17: (480 / @PCLargeViewWidth);
+@pc-large-spacer-18: (560 / @PCLargeViewWidth);
+@pc-large-spacer-19: (640 / @PCLargeViewWidth);
+@pc-large-spacer-20: (960 / @PCLargeViewWidth);
+@pc-large-spacer-21: (1200 / @PCLargeViewWidth);
+
+//移动端屏幕大小查询器，根据设备尺寸适配
+
+/*手机竖*/
+@media (max-width: 500px) {
   :root {
-    --font-size-xs: @font-size-xs;
-    --font-size-s: @font-size-s;
-    --font-size-m: @font-size-m;
-    --font-size-l: @font-size-l;
-    --font-size-xl: @font-size-xl;
+    --font-size-xs: @phone-font-size-xs;
+    --font-size-s: @phone-font-size-s;
+    --font-size-m: @phone-font-size-m;
+    --font-size-l: @phone-font-size-l;
+    --font-size-xl: @phone-font-size-xl;
   }
   //公共大小CSS变量
   :root {
-    --spacer-0: @spacer-0;
-    --spacer-1: @spacer-1;
-    --spacer-2: @spacer-2;
-    --spacer-3: @spacer-3;
-    --spacer-4: @spacer-4;
-    --spacer-5: @spacer-5;
-    --spacer-6: @spacer-6;
-    --spacer-7: @spacer-7;
-    --spacer-8: @spacer-8;
-    --spacer-9: @spacer-9;
-    --spacer-10: @spacer-10;
-    --spacer-11: @spacer-11;
-    --spacer-12: @spacer-12;
-    --spacer-13: @spacer-13;
-    --spacer-14: @spacer-14;
-    --spacer-15: @spacer-15;
-    --spacer-16: @spacer-16;
-    --spacer-17: @spacer-17;
-    --spacer-18: @spacer-18;
-    --spacer-19: @spacer-19;
-    --spacer-20: @spacer-20;
-    --spacer-21: @spacer-21;
+    --spacer-0: @phone-spacer-0;
+    --spacer-1: @phone-spacer-1;
+    --spacer-2: @phone-spacer-2;
+    --spacer-3: @phone-spacer-3;
+    --spacer-4: @phone-spacer-4;
+    --spacer-5: @phone-spacer-5;
+    --spacer-6: @phone-spacer-6;
+    --spacer-7: @phone-spacer-7;
+    --spacer-8: @phone-spacer-8;
+    --spacer-9: @phone-spacer-9;
+    --spacer-10: @phone-spacer-10;
+    --spacer-11: @phone-spacer-11;
+    --spacer-12: @phone-spacer-12;
+    --spacer-13: @phone-spacer-13;
+    --spacer-14: @phone-spacer-14;
+    --spacer-15: @phone-spacer-15;
+    --spacer-16: @phone-spacer-16;
+    --spacer-17: @phone-spacer-17;
+    --spacer-18: @phone-spacer-18;
+    --spacer-19: @phone-spacer-19;
+    --spacer-20: @phone-spacer-20;
+    --spacer-21: @phone-spacer-21;
+  }
+}
+/*平板竖*/
+@media (min-width: 500px) and (max-width: 900px) {
+  :root {
+    --font-size-xs: @pad-vertical-font-size-xs;
+    --font-size-s: @pad-vertical-font-size-s;
+    --font-size-m: @pad-vertical-font-size-m;
+    --font-size-l: @pad-vertical-font-size-l;
+    --font-size-xl: @pad-vertical-font-size-xl;
+  }
+  //公共大小CSS变量
+  :root {
+    --spacer-0: @pad-vertical-spacer-0;
+    --spacer-1: @pad-vertical-spacer-1;
+    --spacer-2: @pad-vertical-spacer-2;
+    --spacer-3: @pad-vertical-spacer-3;
+    --spacer-4: @pad-vertical-spacer-4;
+    --spacer-5: @pad-vertical-spacer-5;
+    --spacer-6: @pad-vertical-spacer-6;
+    --spacer-7: @pad-vertical-spacer-7;
+    --spacer-8: @pad-vertical-spacer-8;
+    --spacer-9: @pad-vertical-spacer-9;
+    --spacer-10: @pad-vertical-spacer-10;
+    --spacer-11: @pad-vertical-spacer-11;
+    --spacer-12: @pad-vertical-spacer-12;
+    --spacer-13: @pad-vertical-spacer-13;
+    --spacer-14: @pad-vertical-spacer-14;
+    --spacer-15: @pad-vertical-spacer-15;
+    --spacer-16: @pad-vertical-spacer-16;
+    --spacer-17: @pad-vertical-spacer-17;
+    --spacer-18: @pad-vertical-spacer-18;
+    --spacer-19: @pad-vertical-spacer-19;
+    --spacer-20: @pad-vertical-spacer-20;
+    --spacer-21: @pad-vertical-spacer-21;
+  }
+}
+/*平板横*/
+@media (min-width: 900px) and (max-width: 1200px) {
+  :root {
+    --font-size-xs: @pad-horizontal-font-size-xs;
+    --font-size-s: @pad-horizontal-font-size-s;
+    --font-size-m: @pad-horizontal-font-size-m;
+    --font-size-l: @pad-horizontal-font-size-l;
+    --font-size-xl: @pad-horizontal-font-size-xl;
+  }
+  //公共大小CSS变量
+  :root {
+    --spacer-0: @pad-horizontal-spacer-0;
+    --spacer-1: @pad-horizontal-spacer-1;
+    --spacer-2: @pad-horizontal-spacer-2;
+    --spacer-3: @pad-horizontal-spacer-3;
+    --spacer-4: @pad-horizontal-spacer-4;
+    --spacer-5: @pad-horizontal-spacer-5;
+    --spacer-6: @pad-horizontal-spacer-6;
+    --spacer-7: @pad-horizontal-spacer-7;
+    --spacer-8: @pad-horizontal-spacer-8;
+    --spacer-9: @pad-horizontal-spacer-9;
+    --spacer-10: @pad-horizontal-spacer-10;
+    --spacer-11: @pad-horizontal-spacer-11;
+    --spacer-12: @pad-horizontal-spacer-12;
+    --spacer-13: @pad-horizontal-spacer-13;
+    --spacer-14: @pad-horizontal-spacer-14;
+    --spacer-15: @pad-horizontal-spacer-15;
+    --spacer-16: @pad-horizontal-spacer-16;
+    --spacer-17: @pad-horizontal-spacer-17;
+    --spacer-18: @pad-horizontal-spacer-18;
+    --spacer-19: @pad-horizontal-spacer-19;
+    --spacer-20: @pad-horizontal-spacer-20;
+    --spacer-21: @pad-horizontal-spacer-21;
+  }
+}
+//笔记本
+@media (min-width: 1200px) and (max-width: 1500px){
+  :root {
+    --font-size-xs: @laptop-font-size-xs;
+    --font-size-s: @laptop-font-size-s;
+    --font-size-m: @laptop-font-size-m;
+    --font-size-l: @laptop-font-size-l;
+    --font-size-xl: @laptop-font-size-xl;
+  }
+  //公共大小CSS变量
+  :root {
+    --spacer-0: @laptop-spacer-0;
+    --spacer-1: @laptop-spacer-1;
+    --spacer-2: @laptop-spacer-2;
+    --spacer-3: @laptop-spacer-3;
+    --spacer-4: @laptop-spacer-4;
+    --spacer-5: @laptop-spacer-5;
+    --spacer-6: @laptop-spacer-6;
+    --spacer-7: @laptop-spacer-7;
+    --spacer-8: @laptop-spacer-8;
+    --spacer-9: @laptop-spacer-9;
+    --spacer-10: @laptop-spacer-10;
+    --spacer-11: @laptop-spacer-11;
+    --spacer-12: @laptop-spacer-12;
+    --spacer-13: @laptop-spacer-13;
+    --spacer-14: @laptop-spacer-14;
+    --spacer-15: @laptop-spacer-15;
+    --spacer-16: @laptop-spacer-16;
+    --spacer-17: @laptop-spacer-17;
+    --spacer-18: @laptop-spacer-18;
+    --spacer-19: @laptop-spacer-19;
+    --spacer-20: @laptop-spacer-20;
+    --spacer-21: @laptop-spacer-21;
+  }
+}
+//大屏
+@media (min-width: 1500px) {
+  :root {
+    --font-size-xs: @pc-large-font-size-xs;
+    --font-size-s: @pc-large-font-size-s;
+    --font-size-m: @pc-large-font-size-m;
+    --font-size-l: @pc-large-font-size-l;
+    --font-size-xl: @pc-large-font-size-xl;
+  }
+  //公共大小CSS变量
+  :root {
+    --spacer-0: @pc-large-spacer-0;
+    --spacer-1: @pc-large-spacer-1;
+    --spacer-2: @pc-large-spacer-2;
+    --spacer-3: @pc-large-spacer-3;
+    --spacer-4: @pc-large-spacer-4;
+    --spacer-5: @pc-large-spacer-5;
+    --spacer-6: @pc-large-spacer-6;
+    --spacer-7: @pc-large-spacer-7;
+    --spacer-8: @pc-large-spacer-8;
+    --spacer-9: @pc-large-spacer-9;
+    --spacer-10: @pc-large-spacer-10;
+    --spacer-11: @pc-large-spacer-11;
+    --spacer-12: @pc-large-spacer-12;
+    --spacer-13: @pc-large-spacer-13;
+    --spacer-14: @pc-large-spacer-14;
+    --spacer-15: @pc-large-spacer-15;
+    --spacer-16: @pc-large-spacer-16;
+    --spacer-17: @pc-large-spacer-17;
+    --spacer-18: @pc-large-spacer-18;
+    --spacer-19: @pc-large-spacer-19;
+    --spacer-20: @pc-large-spacer-20;
+    --spacer-21: @pc-large-spacer-21;
   }
 }

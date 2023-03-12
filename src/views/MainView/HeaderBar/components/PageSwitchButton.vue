@@ -8,26 +8,27 @@
     </ripple-button>
   </div>
 </template>
-<script>
-export default {
-  methods: {
-    animation(e) {
-      //延迟动画
-      //获得点击元素的第一个子元素的第一个子元素
-      const icon = e.currentTarget.firstElementChild.firstElementChild
-      icon.classList.add('page-switch-icon-animation')
-      setTimeout(function () {
-        icon.classList.remove('page-switch-icon-animation')
-      }, 200)
-    },
-    pageSwitching(num) {
-      if (num == 1) {
-        this.$router.go(1)
-      }
-      if (num == -1) {
-        this.$router.go(-1)
-      }
-    }
+<script setup>
+import { useRouter } from 'vue-router'
+
+function animation(e) {
+  //延迟动画
+  //获得点击元素的第一个子元素的第一个子元素
+  const icon = e.currentTarget.firstElementChild.firstElementChild
+  icon.classList.add('page-switch-icon-animation')
+  setTimeout(function () {
+    icon.classList.remove('page-switch-icon-animation')
+  }, 200)
+}
+
+const router = useRouter()
+
+function pageSwitching(num) {
+  if (num == 1) {
+    router.go(1)
+  }
+  if (num == -1) {
+    router.go(-1)
   }
 }
 </script>
@@ -64,7 +65,7 @@ export default {
 }
 
 //移动端隐藏元素
-@media (max-width: 699.99px) {
+@media (max-width: 1200px) {
   .page-switch-button-root {
     display: none;
   }
