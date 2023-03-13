@@ -57,7 +57,7 @@ import SideBar from './SideBar/SideBar.vue'
         left: 0;
         right: 0;
         z-index: 20;
-        background: var(--bg-color-brighter);
+        background: var(--bg-color-opacification);
       }
     }
   }
