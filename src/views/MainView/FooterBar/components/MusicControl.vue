@@ -48,7 +48,7 @@
     line-height: var(--footer-bar-height);
 
     > button {
-      font-size: var(--font-size-l);
+      font-size: var(--font-size-s);
       height: 100%;
       width: 100%;
       border: 0;
@@ -72,9 +72,9 @@
       button {
         font-size: var(--font-size-xl);
         color: inherit;
-        background: var(--bg-color-hover);
+        background: var(--toast-bg);
         border-radius: 50%;
-        transform: scale(0.8);
+        transform: scale(0.7);
       }
 
       &:hover {

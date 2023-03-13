@@ -53,13 +53,34 @@ const searchicon = toRef(obj, 'searchicon')
       padding: 0 var(--spacer-6);
       font-size: var(--spacer-4);
       border-radius: var(--border-radius-s);
-      color: inherit;
+      color: var(--text-color);
       position: relative;
-      border: none;
+      border: 1px solid var(--border-color);
       outline: none;
 
       &:focus {
         background-color: var(--bg-color-hover);
+      }
+
+      /*修改提示文字的颜色*/
+      &::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: var(--text-color);
+      }
+
+      &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: var(--text-color);
+      }
+
+      &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: var(--text-color);
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: var(--text-color);
       }
     }
     input[type='submit'] {

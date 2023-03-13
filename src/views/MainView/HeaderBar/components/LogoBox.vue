@@ -21,7 +21,7 @@
   }
   &::after {
     content: 'ZhiYuanPalace';
-    font-size: var(--spacer-5);
+    font-size: var(--font-size-s);
     font-weight: bold;
     opacity: 0.5;
     letter-spacing: 1px;
@@ -30,6 +30,13 @@
   }
   &:hover {
     background-color: var(--button-hover-bg);
+  }
+}
+
+//手机布局
+@media (max-width: 500px) {
+  .menu-open .logo-box {
+    display: none;
   }
 }
 </style>

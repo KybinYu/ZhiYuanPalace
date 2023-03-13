@@ -79,7 +79,7 @@ const openMusicView = () => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: var(--font-size-m);
+    align-items: flex-start;
 
     span {
       display: block;
@@ -87,10 +87,9 @@ const openMusicView = () => {
 
       &.name {
         font-size: var(--font-size-s);
-        font-weight: 700;
       }
       &.singer {
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-xs);
       }
     }
   }

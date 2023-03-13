@@ -124,7 +124,6 @@ function onSelect(action) {
     cursor: pointer;
     vertical-align: super;
     padding: 0;
-    font-size: 14px;
 
     img {
       width: var(--spacer-8);

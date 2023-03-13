@@ -28,31 +28,17 @@ import SideBar from './SideBar/SideBar.vue'
 
 <style lang="less" scoped>
 #main-view-inner {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   overflow: hidden;
 
   .main-view-top {
-    position: absolute;
-    top: 0;
     height: var(--header-bar-height);
-    left: 0;
-    right: 0;
     z-index: var(--header-bar-z-index);
   }
 
   .main-view-center {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-top: var(--header-bar-height);
     display: flex;
     overflow: hidden;
+    height: calc(100vh - var(--header-bar-height));
 
     .main-view-left {
       width: var(--side-bar-width);
@@ -77,11 +63,11 @@ import SideBar from './SideBar/SideBar.vue'
   }
 
   .main-view-bottom {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    height: var(--footer-bar-height);
     left: var(--side-bar-width);
     right: 0;
+    height: var(--footer-bar-height);
     z-index: var(--footer-bar-z-index);
   }
 }
@@ -120,13 +106,11 @@ import SideBar from './SideBar/SideBar.vue'
       border-radius: 0;
       border: 0;
     }
-    .main-view-top {
-      background-color: var(--bg-color);
-    }
+
     .main-view-left {
       position: absolute;
       z-index: var(--side-bar-z-index);
-      top: 0;
+      top: var(--header-bar-height);
       height: 0;
       left: 0;
       right: 0;

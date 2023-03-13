@@ -47,7 +47,7 @@ function switchMenu() {
   height: var(--header-bar-height);
   border-radius: 0;
   background-color: transparent;
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
   border: 0;
 
   i#menu-switch-icon {

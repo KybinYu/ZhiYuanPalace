@@ -24,6 +24,7 @@ import { Swipe, SwipeItem } from 'vant'
 import 'vant/lib/index.css'
 
 //自定义组件
+import Acrylrc from '@/components/acrylrc.vue'
 import RippleButton from '@/components/ripple-button.vue'
 import SwipePanelEnd from '@/components/swipe-panel-end.vue'
 import SwipePanelStart from '@/components/swipe-panel-start.vue'
@@ -56,6 +57,7 @@ app.use(Popover)
 app.use(Dialog)
 app.use(Swipe)
 app.use(SwipeItem)
+app.component('Acrylrc', Acrylrc)
 app.component('RippleButton', RippleButton)
 app.component('SwipePanelEnd', SwipePanelEnd)
 app.component('SwipePanelStart', SwipePanelStart)

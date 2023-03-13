@@ -19,7 +19,8 @@ import MusicMore from './components/MusicMore.vue'
 <style lang="less">
 #footer-bar {
   background-color: var(--bg-color);
-  box-shadow: var(--shadow-3);
+  transition: background-color 50ms;
+
   .footer-bar-inner {
     height: 100%;
     display: flex;

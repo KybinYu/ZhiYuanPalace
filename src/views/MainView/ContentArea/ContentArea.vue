@@ -35,8 +35,8 @@ watch(
 #content-area {
   background-color: var(--bg-color-brighter);
   border-radius: var(--border-radius-m) 0 0 0;
-  border-top: var(--spacer-1) solid var(--border-color);
-  border-left: var(--spacer-1) solid var(--border-color);
+  border-top: var(--spacer-2) solid var(--border-color);
+  border-left: var(--spacer-2) solid var(--border-color);
 }
 .content-area-inner {
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);

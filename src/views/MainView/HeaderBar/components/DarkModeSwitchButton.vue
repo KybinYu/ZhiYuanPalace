@@ -98,7 +98,7 @@ function darkMode() {
     cursor: pointer;
     vertical-align: super;
     padding: 0;
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
 
     i#dark-mode-switch-icon {
       display: inline-block;

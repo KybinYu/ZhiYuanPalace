@@ -2,11 +2,11 @@
   <swipe-panel-start vertical ref="startView">
     <start-view />
   </swipe-panel-start>
-  <main-view />
+  <acrylrc>
+    <main-view />
+  </acrylrc>
 </template>
 <script setup>
-// import { onMounted, onUnmounted } from 'vue'
-import { ref } from 'vue'
 import StartView from '@/views/StartView/StartView.vue'
 import MainView from '@/views/MainView/MainView.vue'
 
@@ -21,16 +21,8 @@ if (isMobile()) {
 } else {
   document.documentElement.setAttribute('device', 'pc')
 }
-
-const startView = ref()
-const closeStartView = () => {
-  startView.value.close()
-}
-// onMounted(() => {
-//   closeStartView()
-// })
 </script>
-<style>
+<style lang="less">
 #app {
   position: fixed;
   top: 0;
@@ -39,5 +31,16 @@ const closeStartView = () => {
   right: 0;
   overflow: hidden;
   background-color: var(--bg-color);
+
+  > .acrylrc {
+    > .acrylrc-desktop-background {
+      background: url(@/assets/images/Start.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    > .acrylrc-color-blend {
+      transition: background-color 50ms;
+    }
+  }
 }
 </style>
