@@ -1,4 +1,11 @@
 /* 公共样式表 */
+/* 內减模式 */
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 变量 */
 :root {
   --font-size-xs: 10px;
   --font-size-s: 12px;

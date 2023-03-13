@@ -1,6 +1,15 @@
 <template>
   <div>
-    <ripple-button class="footer-bar-info" @click="openMusicView()">
+    <ripple-button
+      class="footer-bar-info"
+      @click="openMusicView()"
+      v-tippy="{
+        content: '进入播放器',
+        placement: 'top',
+        animation: 'scale-extreme',
+        inertia: true
+      }"
+    >
       <div class="cover">
         <img src="@/assets/uploads/月亮警察.webp" alt="月亮警察" />
       </div>
@@ -35,6 +44,7 @@ const openMusicView = () => {
   cursor: pointer;
   border: none;
   background: transparent;
+  padding-left: 0;
 
   .cover {
     position: relative;
@@ -42,6 +52,7 @@ const openMusicView = () => {
 
     img {
       width: var(--footer-bar-height);
+      vertical-align: middle;
     }
 
     &::after {

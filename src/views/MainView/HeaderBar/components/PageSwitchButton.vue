@@ -1,9 +1,25 @@
 <template>
   <div class="page-switch-button-root">
-    <ripple-button @click="pageSwitching(-1), animation($event)">
+    <ripple-button
+      @click="pageSwitching(-1), animation($event)"
+      v-tippy="{
+        content: '后退',
+        placement: 'bottom',
+        animation: 'scale-extreme',
+        inertia: true
+      }"
+    >
       <i class="segoe-fluent-icons">&#xe973;</i>
     </ripple-button>
-    <ripple-button @click="pageSwitching(1), animation($event)">
+    <ripple-button
+      @click="pageSwitching(1), animation($event)"
+      v-tippy="{
+        content: '前进',
+        placement: 'bottom',
+        animation: 'scale-extreme',
+        inertia: true
+      }"
+    >
       <i class="segoe-fluent-icons">&#xe974;</i>
     </ripple-button>
   </div>

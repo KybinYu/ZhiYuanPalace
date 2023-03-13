@@ -1,8 +1,8 @@
 <template>
-  <section id="music-view-inner"></section>
+  <section id="start-view-inner"></section>
 </template>
 <style>
-#music-view-inner {
+#start-view-inner {
   position: absolute;
   top: 0;
   bottom: 0;

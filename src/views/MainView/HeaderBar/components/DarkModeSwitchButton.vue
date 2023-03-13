@@ -1,6 +1,14 @@
 <template>
   <div class="dark-mode-switch-button-root">
-    <ripple-button @click="darkMode()">
+    <ripple-button
+      @click="darkMode()"
+      v-tippy="{
+        content: darkmodeButonTooltip.msg,
+        placement: 'bottom',
+        animation: 'scale-extreme',
+        inertia: true
+      }"
+    >
       <i class="segoe-fluent-icons" id="dark-mode-switch-icon">
         {{ darkmodeButonTooltip.icon }}
       </i>

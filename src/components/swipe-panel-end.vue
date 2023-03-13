@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { toRefs, defineProps, ref } from 'vue'
+import { toRefs, ref } from 'vue'
 
 const props = defineProps({
   //子组件接收父组件传递过来的值
@@ -46,8 +46,11 @@ const swipePanelEnd = ref()
 const open = () => {
   swipePanelEnd.value.next()
 }
+const close = () => {
+  swipePanelEnd.value.next()
+}
 //把方法暴露出去
-defineExpose({ open })
+defineExpose({ open, close })
 </script>
 <style scoped>
 .swipe-panel-end {

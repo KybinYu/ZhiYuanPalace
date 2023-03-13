@@ -1,7 +1,13 @@
 <template>
+  <swipe-panel-start vertical ref="startView">
+    <start-view />
+  </swipe-panel-start>
   <main-view />
 </template>
 <script setup>
+// import { onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
+import StartView from '@/views/StartView/StartView.vue'
 import MainView from '@/views/MainView/MainView.vue'
 
 function isMobile() {
@@ -15,6 +21,14 @@ if (isMobile()) {
 } else {
   document.documentElement.setAttribute('device', 'pc')
 }
+
+const startView = ref()
+const closeStartView = () => {
+  startView.value.close()
+}
+// onMounted(() => {
+//   closeStartView()
+// })
 </script>
 <style>
 #app {

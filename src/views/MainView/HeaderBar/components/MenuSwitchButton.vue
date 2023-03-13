@@ -1,5 +1,14 @@
 <template>
-  <ripple-button class="menu-switch-button" @click="switchMenu(), animation()">
+  <ripple-button
+    class="menu-switch-button"
+    @click="switchMenu(), animation()"
+    v-tippy="{
+      content: '打开/关闭菜单',
+      placement: 'bottom-end',
+      animation: 'scale-extreme',
+      inertia: true
+    }"
+  >
     <i class="segoe-fluent-icons" id="menu-switch-icon">&#xe700;</i>
   </ripple-button>
 </template>

@@ -7,7 +7,15 @@
       placement="bottom-end"
     >
       <template #reference>
-        <ripple-button @click="animation()">
+        <ripple-button
+          @click="animation()"
+          v-tippy="{
+            content: '更多',
+            placement: 'bottom',
+            animation: 'scale-extreme',
+            inertia: true
+          }"
+        >
           <img
             id="avatar-image"
             src="http://q1.qlogo.cn/g?b=qq&nk=570446022&s=4"

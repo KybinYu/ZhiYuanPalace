@@ -1,12 +1,26 @@
 <template>
   <div class="footer-bar-more">
     <div class="music-lyric-button">
-      <ripple-button>
+      <ripple-button
+        v-tippy="{
+          content: '显示悬浮歌词',
+          placement: 'top',
+          animation: 'scale-extreme',
+          inertia: true
+        }"
+      >
         <i class="segoe-fluent-icons">词</i>
       </ripple-button>
     </div>
     <div class="music-list-button">
-      <ripple-button>
+      <ripple-button
+        v-tippy="{
+          content: '播放列表',
+          placement: 'top-end',
+          animation: 'scale-extreme',
+          inertia: true
+        }"
+      >
         <i class="segoe-fluent-icons">&#xe90b;</i>
       </ripple-button>
     </div>

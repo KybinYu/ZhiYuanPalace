@@ -2,7 +2,17 @@
   <div class="search-bar">
     <form action="">
       <input type="text" placeholder="请输入搜索关键词..." />
-      <input type="submit" class="segoe-fluent-icons" :value="searchicon" />
+      <input
+        type="submit"
+        class="segoe-fluent-icons"
+        :value="searchicon"
+        v-tippy="{
+          content: '搜索',
+          placement: 'bottom',
+          animation: 'scale-extreme',
+          inertia: true
+        }"
+      />
     </form>
   </div>
 </template>
@@ -35,6 +45,7 @@ const searchicon = toRef(obj, 'searchicon')
       transform: scaleX(1);
     }
     input[type='text'] {
+      box-sizing: border-box;
       width: 100%;
       height: var(--spacer-9);
       margin: calc((var(--header-bar-height) - var(--spacer-9)) / 2) 0;
@@ -44,6 +55,8 @@ const searchicon = toRef(obj, 'searchicon')
       border-radius: var(--border-radius-s);
       color: inherit;
       position: relative;
+      border: none;
+      outline: none;
 
       &:focus {
         background-color: var(--bg-color-hover);
@@ -59,6 +72,8 @@ const searchicon = toRef(obj, 'searchicon')
       background-color: transparent;
       font-size: var(--font-size-m);
       cursor: pointer;
+      border: none;
+      outline: none;
 
       &:hover {
         background-color: var(--bg-color-hover);

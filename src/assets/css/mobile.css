@@ -1,16 +1,20 @@
 /* 移动适配 */
-:root[device|="mobile"] button:not(.set-background):hover,
-:root[device|="mobile"] input[type='submit']:hover {
+:root[device|='mobile'] button:not(.set-background):hover,
+:root[device|='mobile'] input[type='submit']:hover {
   background: transparent !important;
 }
-:root[device|="mobile"] button:not(.set-background):hover *::after {
+:root[device|='mobile'] button:not(.set-background):hover *::after {
   visibility: hidden;
 }
 :root[device|='mobile'] ul.border-layer {
   display: none;
 }
+:root[device|='mobile'] [data-tippy-root] {
+  display: none;
+}
+
 /*手机竖*/
-@media (max-width: 500px) {
+@media (max-width: 500.01px) {
   :root {
     --font-size-xs: 2.66666667vw;
     --font-size-s: 3.2vw;
@@ -44,7 +48,7 @@
   }
 }
 /*平板竖*/
-@media (min-width: 500px) and (max-width: 900px) {
+@media (min-width: 500.02px) and (max-width: 900px) {
   :root {
     --font-size-xs: 1.30208333vw;
     --font-size-s: 1.5625vw;

@@ -14,6 +14,12 @@
           :to="page.url"
           class="side-bar-router-link"
           @click="closeMenu(), animation($event)"
+          v-tippy="{
+            content: page.alias,
+            placement: 'right',
+            animation: 'scale-extreme',
+            inertia: true
+          }"
         >
           <div class="icon">
             <i class="segoe-fluent-icons fillIcon">{{ page.fillIcon }}</i>
@@ -178,9 +184,9 @@ export default {
     > li {
       height: var(--side-bar-item-height);
       margin-bottom: var(--spacer-3);
-      width: 100%;
       border-radius: var(--border-radius-s);
       overflow: hidden;
+      border: 2px solid transparent;
 
       > a.side-bar-router-link {
         position: relative;
@@ -192,7 +198,7 @@ export default {
 
         > .icon {
           height: 100%;
-          width: var(--side-bar-item-height);
+          width: calc(var(--side-bar-item-height) - 4px);
           position: relative;
           flex: none;
           transform: translateY(0px);

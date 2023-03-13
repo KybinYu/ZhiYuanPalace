@@ -1,10 +1,19 @@
 <template>
   <div class="full-screen-switch-button-root">
-    <ripple-button>
+    <ripple-button
+      id="full-screen-switch-button"
+      v-tippy="{
+        content: '全屏',
+        placement: 'bottom-start',
+        animation: 'scale-extreme',
+        inertia: true
+      }"
+    >
       <i class="segoe-fluent-icons">&#xe740;</i>
     </ripple-button>
   </div>
 </template>
+<script></script>
 <style lang="less" scoped>
 .full-screen-switch-button-root {
   display: flex;

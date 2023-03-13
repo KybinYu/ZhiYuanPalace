@@ -1,17 +1,38 @@
 <template>
   <div class="footer-bar-control">
     <div class="prev">
-      <ripple-button>
+      <ripple-button
+        v-tippy="{
+          content: '上一首',
+          placement: 'top',
+          animation: 'scale-extreme',
+          inertia: true
+        }"
+      >
         <i class="segoe-fluent-icons">&#xf8ac;</i>
       </ripple-button>
     </div>
     <div class="play">
-      <ripple-button class="set-background">
+      <ripple-button
+        v-tippy="{
+          content: '播放/暂停',
+          placement: 'top',
+          animation: 'scale-extreme',
+          inertia: true
+        }"
+      >
         <i class="segoe-fluent-icons">&#xedda;</i>
       </ripple-button>
     </div>
     <div class="next">
-      <ripple-button>
+      <ripple-button
+        v-tippy="{
+          content: '下一首',
+          placement: 'top',
+          animation: 'scale-extreme',
+          inertia: true
+        }"
+      >
         <i class="segoe-fluent-icons">&#xf8ad;</i>
       </ripple-button>
     </div>
