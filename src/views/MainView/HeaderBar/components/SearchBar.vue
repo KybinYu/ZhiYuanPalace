@@ -39,7 +39,7 @@ const searchicon = toRef(obj, 'searchicon')
       height: 2px;
       background: var(--theme-color);
       transform: scaleX(0);
-      transition: all 200ms;
+      transition: transform 200ms;
     }
     &:has(:focus)::after {
       transform: scaleX(1);

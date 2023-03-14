@@ -16,70 +16,85 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { showToast } from 'vant'
-import { reactive, toRef } from 'vue'
+export default {
+  data() {
+    return {
+      darkmodeButonTooltip: {
+        msg: '夜间模式',
+        icon: '\ue708'
+      }
+    }
+  },
+  methods: {
+    darkMode() {
+      const icon = document.querySelector('#dark-mode-switch-icon')
+      if (!document.documentElement.getAttribute('theme-mode')) {
+        //切换主题
+        document.documentElement.setAttribute('theme-mode', 'dark')
+        //适配vant组件
+        document.documentElement.classList.add('van-theme-dark')
+        //弹出提示
+        showToast({
+          position: 'bottom',
+          message: '夜间模式已开启',
+          icon: 'https://pan.yiru.love/static/images/emoji/1f634.webp'
+        })
+        //延迟更换图标，配合动画
+        icon.classList.add('dark-mode-switch-icon-animation-begin')
+        var th = this
+        setTimeout(function () {
+          icon.classList.remove('dark-mode-switch-icon-animation-begin')
+          icon.classList.add('dark-mode-switch-icon-animation-end')
+          th.darkmodeButonTooltip.msg = '日间模式'
+          th.darkmodeButonTooltip.icon = '\ue706'
+          setTimeout(function () {
+            icon.classList.remove('dark-mode-switch-icon-animation-end')
+          }, 400)
+        }, 200)
+      } else {
+        //切换主题
+        document.documentElement.removeAttribute('theme-mode')
+        //适配vant组件
+        document.documentElement.classList.remove('van-theme-dark')
+        //弹出提示
+        showToast({
+          position: 'bottom',
+          message: '夜间模式已关闭',
+          icon: 'https://pan.yiru.love/static/images/emoji/1f60e.webp'
+        })
+        //延迟更换图标，配合动画
+        icon.classList.add('dark-mode-switch-icon-animation-begin')
+        var th = this
+        setTimeout(function () {
+          icon.classList.remove('dark-mode-switch-icon-animation-begin')
+          icon.classList.add('dark-mode-switch-icon-animation-end')
+          th.darkmodeButonTooltip.msg = '夜间模式'
+          th.darkmodeButonTooltip.icon = '\ue708'
+          setTimeout(function () {
+            icon.classList.remove('dark-mode-switch-icon-animation-end')
+          }, 600)
+        }, 300)
+      }
+    }
+  },
+  mounted() {
+    // const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')
+    //if (isDarkTheme.matches) 是系统的深色
 
-const obj = reactive({
-  darkmodeButonTooltip: {
-    msg: '夜间模式',
-    icon: '\ue708'
-  }
-})
-const darkmodeButonTooltip = toRef(obj, 'darkmodeButonTooltip')
-
-function darkMode() {
-  const icon = document.querySelector('#dark-mode-switch-icon')
-  if (!document.documentElement.getAttribute('theme-mode')) {
-    //切换主题
-    document.documentElement.setAttribute('theme-mode', 'dark')
-    //适配vant组件
-    document.documentElement.classList.add('van-theme-dark')
-
-    //弹出提示
-    showToast({
-      position: 'bottom',
-      message: '夜间模式已开启',
-      icon: 'https://pan.yiru.love/static/images/emoji/1f634.webp'
-    })
-
-    //延迟更换图标，配合动画
-    icon.classList.add('dark-mode-switch-icon-animation-begin')
-    var th = this
-    setTimeout(function () {
-      icon.classList.remove('dark-mode-switch-icon-animation-begin')
-      icon.classList.add('dark-mode-switch-icon-animation-end')
-      th.darkmodeButonTooltip.msg = '日间模式'
-      th.darkmodeButonTooltip.icon = '\ue706'
-      setTimeout(function () {
-        icon.classList.remove('dark-mode-switch-icon-animation-end')
-      }, 400)
-    }, 200)
-  } else {
-    //切换主题
-    document.documentElement.removeAttribute('theme-mode')
-    //适配vant组件
-    document.documentElement.classList.remove('van-theme-dark')
-
-    //弹出提示
-    showToast({
-      position: 'bottom',
-      message: '夜间模式已关闭',
-      icon: 'https://pan.yiru.love/static/images/emoji/1f60e.webp'
-    })
-
-    //延迟更换图标，配合动画
-    icon.classList.add('dark-mode-switch-icon-animation-begin')
-    var th = this
-    setTimeout(function () {
-      icon.classList.remove('dark-mode-switch-icon-animation-begin')
-      icon.classList.add('dark-mode-switch-icon-animation-end')
-      th.darkmodeButonTooltip.msg = '夜间模式'
-      th.darkmodeButonTooltip.icon = '\ue708'
-      setTimeout(function () {
-        icon.classList.remove('dark-mode-switch-icon-animation-end')
-      }, 600)
-    }, 300)
+    let currdate = new Date()
+    if (currdate.getHours() >= 19 || currdate.getHours() < 7) {
+      //切换主题
+      document.documentElement.setAttribute('theme-mode', 'dark')
+      //适配vant组件
+      document.documentElement.classList.add('van-theme-dark')
+    } else {
+      //切换主题
+      document.documentElement.removeAttribute('theme-mode')
+      //适配vant组件
+      document.documentElement.classList.remove('van-theme-dark')
+    }
   }
 }
 </script>
@@ -105,11 +120,11 @@ function darkMode() {
       vertical-align: middle;
 
       &.dark-mode-switch-icon-animation-begin {
-        transition: all 400ms;
+        transition: transform 400ms;
         transform: rotateZ(-180deg) scale(0.6);
       }
       &.dark-mode-switch-icon-animation-end {
-        transition: all 400ms;
+        transition: transform 400ms;
         transform: rotateZ(-360deg) scale(1);
       }
     }

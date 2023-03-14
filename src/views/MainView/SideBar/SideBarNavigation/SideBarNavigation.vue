@@ -202,7 +202,7 @@ export default {
           position: relative;
           flex: none;
           transform: translateY(0px);
-          transition: all 400ms;
+          transition: transform 400ms;
 
           > i {
             position: absolute;
@@ -233,7 +233,7 @@ export default {
             opacity: 0;
             font-style: italic;
             margin-left: var(--spacer-5);
-            transition: all 200ms;
+            transition: opacity 200ms;
             background-color: var(--theme-color);
             padding: 0 var(--spacer-4);
             border-radius: var(--border-radius-xs);
@@ -246,8 +246,7 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 520px;
-    height: calc(10 * (var(--side-bar-item-height) + var(--spacer-3)));
+    height: calc(10 * (var(--side-bar-item-height) + var(--spacer-3) + 4px));
   }
 }
 
@@ -256,7 +255,7 @@ export default {
   ul.content-layer {
     > li {
       > a.side-bar-router-link {
-        transition: all 200ms;
+        transition: background-color 200ms;
 
         &:hover {
           background-color: rgba(127, 127, 127, 0.05);

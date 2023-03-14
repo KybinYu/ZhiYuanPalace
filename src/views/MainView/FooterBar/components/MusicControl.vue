@@ -75,10 +75,10 @@
         background: var(--toast-bg);
         border-radius: 50%;
         transform: scale(0.7);
-      }
 
-      &:hover {
-        background-color: var(--button-hover-bg);
+        &:hover {
+          background-color: var(--button-hover-bg);
+        }
       }
     }
   }

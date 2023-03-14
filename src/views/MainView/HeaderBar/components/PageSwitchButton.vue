@@ -66,7 +66,7 @@ function pageSwitching(num) {
     i.segoe-fluent-icons {
       display: inline-block;
       transform: none;
-      transition: all 400ms;
+      transition: transform 400ms;
       vertical-align: middle;
       &.page-switch-icon-animation {
         transform: scale(2, 0.5);

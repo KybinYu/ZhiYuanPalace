@@ -38,7 +38,11 @@ import SideBar from './SideBar/SideBar.vue'
   .main-view-center {
     display: flex;
     overflow: hidden;
-    height: calc(100vh - var(--header-bar-height));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: var(--header-bar-height);
 
     .main-view-left {
       width: var(--side-bar-width);
@@ -110,7 +114,7 @@ import SideBar from './SideBar/SideBar.vue'
     .main-view-left {
       position: absolute;
       z-index: var(--side-bar-z-index);
-      top: var(--header-bar-height);
+      top: 0;
       height: 0;
       left: 0;
       right: 0;

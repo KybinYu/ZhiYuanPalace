@@ -23,6 +23,9 @@ if (isMobile()) {
 }
 </script>
 <style lang="less">
+body {
+  height: 100vh;
+}
 #app {
   position: fixed;
   top: 0;
@@ -30,17 +33,37 @@ if (isMobile()) {
   left: 0;
   right: 0;
   overflow: hidden;
-  background-color: var(--bg-color);
 
   > .acrylrc {
-    > .acrylrc-desktop-background {
-      background: url(@/assets/images/Start.jpg) no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    > .acrylrc-color-blend {
-      transition: background-color 50ms;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    > .acrylrc-gaussian-blur {
+      backdrop-filter: none;
     }
   }
+}
+
+//背景图
+//处理性能问题，暂时使用伪元素方法进行模糊
+#app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('@/assets/images/20210617054007963.jpg') no-repeat
+    center/cover;
+  filter: blur(16px);
+  margin: -32px;
+}
+:root[theme-mode='dark'] #app::before {
+  background: url('@/assets/images/20210617054007202.jpg') no-repeat
+    center/cover;
 }
 </style>

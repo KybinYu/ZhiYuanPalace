@@ -51,12 +51,12 @@ function switchMenu() {
   border: 0;
 
   i#menu-switch-icon {
-    transition: all 200ms;
+    transition: transform 200ms;
     display: inline-block;
     vertical-align: middle;
 
     &.menu-switch-icon-animation {
-      transition: all 200ms;
+      transition: transform 200ms;
       transform: scaleX(0.4);
     }
   }

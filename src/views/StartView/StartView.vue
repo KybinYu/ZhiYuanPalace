@@ -1,6 +1,8 @@
 <template>
   <section id="start-view-inner">
-    <div class="start-view-bg"></div>
+    <div class="start-view-bg">
+      <img src="@/assets/images/Start.jpg" alt="" />
+    </div>
     <section class="start-view-center">
       <div class="start-view-avatar">
         <img src="http://q1.qlogo.cn/g?b=qq&nk=570446022&s=5" alt="头像" />
@@ -13,7 +15,7 @@
       </div>
       <div class="start-view-tips">
         <div class="start-view-tips-icon"></div>
-        <span>向上拖动进入主页</span>
+        <span>向上滑动解锁</span>
       </div>
     </section>
   </section>
@@ -111,11 +113,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(@/assets/images/Start.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    pointer-events: none;
-    animation: an-scale-reduce-1d05x 1s, an-opacity-1 0.5s;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: an-scale-reduce-1d05x 1s, an-opacity-1 0.5s;
+      pointer-events: none;
+    }
   }
 
   .start-view-center {
